@@ -1,0 +1,14 @@
+triphi.txt has some redundancy. checks are good, but I think it goes beyond that. Better formatting would be nice somehow. Maybe jupityr notebooks?
+
+Glyph is good for no rotation/flip. That's probably fine, but some thoughts..
+  even out the space perpendicularly from the rays to the glyph, probably weighing the pointy end less.
+  interactively adjust position based on parameters, probably with some interpolation
+
+PNG output with cairo?
+svglib to reportlab looks more direct? be nice if it was all-free
+cairosvg looks not so bad, but setting up cairo might be hairy, and requires python3
+  it claims a compiler is required for windoze.. that doesn't sound right
+
+Align tile with an axis, two levgels of recursion. Haven't worked out how to tile otherwise.
+
+In inkscape, turn off all tiles except a flipped pair, select all, resize page to selection, turn tiles back on, export to bitmap! IRfanview will make a tiling from the unit tile.
