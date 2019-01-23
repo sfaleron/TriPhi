@@ -1,7 +1,11 @@
+
+try to get rid of adb dependency, or make adb presentable
+
 triphi.txt has some redundancy. checks are good, but I think it goes beyond that. Better formatting would be nice somehow. Maybe jupityr notebooks?
 
 Glyph is good for no rotation/flip. That's probably fine, but some thoughts..
-  even out the space perpendicularly from the rays to the glyph, probably weighing the pointy end less.
+  even out the space perpendicularly from the rays to the glyph, probably weighing the pointy end less. convex hull might help a lot, but it's less obvious how to define the pointy tail. actually, it isn't that hard, the convex hull would be highly pointy.
+  skipping convex hull, another approach is to pick a center of the glyph and draw perpendiculars to the borders.
   interactively adjust position based on parameters, probably with some interpolation
 
 PNG output with cairo?

@@ -51,4 +51,7 @@ if __name__ == '__main__':
     stk.add(arcs(pts.apex, pts.slim, pts.squat, n=2, radius=0.12*SCL, **decAttrs))
     stk.add(arcs(pts.common, pts.apex, pts.squat, n=2, **decAttrs))
 
+    # labels might be nice to have, and possibly a little box off to the side
+    # with the side ratios and maybe also some angle values. Maybe area too.
+
     print(stk)

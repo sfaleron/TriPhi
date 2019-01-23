@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     centered     = [Point(pt.x-center.x, pt.y-center.y) for pt in (A,B,C)]
 
-    print('Center:', center)
+    print('Center: ({:.4f}, {:.4f})'.format(*center))
 
     print('ABC', dumpfunc(A,B,C))
 
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     print('GHI', dumpfunc(G,H,I))
 
 
-    print('Center:', Point(0,0))
+    print('Center: (0.0, 0.0)')
 
     A,B,C        = centered
 
