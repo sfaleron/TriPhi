@@ -77,9 +77,9 @@ def inner(A, B, C, flip=False):
     if flip:
         invphi = 1-invphi
 
-    D = between(B, C, invphi)
-    E = between(C, A, invphi)
-    F = between(A, B, invphi)
+    D = between(C, B, invphi)
+    E = between(A, C, invphi)
+    F = between(B, A, invphi)
 
     G = midpoint(E, F)
     H = midpoint(F, D)
