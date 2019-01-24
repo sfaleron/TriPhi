@@ -127,8 +127,8 @@ SIDE   = standardSide
 
 # "nm" is "normalized", not "nanometers"
 #
-pgonAttrs = {'stroke-width' : '0', 'fill-opacity' : '1'}
-lineAttrs = {'stroke' : 'black', 'stroke-width' : '3nm'}
+pgonAttrs = {'stroke-width' : '0px', 'fill-opacity' : '1'}
+lineAttrs = {'stroke' : 'black',   'stroke-width' : '3nm'}
 
 from .math import outer, inner
 

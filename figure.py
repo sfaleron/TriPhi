@@ -3,7 +3,7 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import absolute_import
 
-from  simplesvg import SVGStack
+from  simplesvg import SVGStack, SVG
 from        src import layerReg, defaults, redraw
 
 class FancySet(set):
@@ -62,7 +62,7 @@ def make_svg(args=(), opts=None):
 
     w,h = opts.dims
 
-    stk = SVGStack(width=w, height=h)
+    stk = SVGStack(SVG('TriPhi Figure', width=w, height=h))
 
     layers['background'](stk, opts.tri1, colors.bg, **opts.attrs.pgon)
 
@@ -86,7 +86,7 @@ def make_svg(args=(), opts=None):
 
 
     if purgeInvisible:
-        stk.purge_invisible_layers()
+        stk[0].purge_invisible_layers()
 
     return stk
 

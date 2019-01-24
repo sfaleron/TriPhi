@@ -3,7 +3,7 @@ from __future__  import division
 from __future__  import print_function
 from __future__  import absolute_import
 
-from simplesvg   import SVGStack, filled_polygon
+from simplesvg   import SVGStack, SVG, filled_polygon
 from src         import defaults, tileOpts, redraw
 
 from src.keyattr import KeywordToAttr
@@ -69,7 +69,7 @@ def make_tiles(n, noFlips=False, flipZero=False, sideLength=None, rotate=0, turn
 
     redraw(opts)
 
-    stk = SVGStack()
+    stk = SVGStack(SVG('TriPhi Tiles'))
 
     make_tile(stk, '0', opts)
 

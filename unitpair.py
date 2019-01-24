@@ -3,7 +3,7 @@ from  __future__ import division
 from  __future__ import print_function
 from  __future__ import absolute_import
 
-from simplesvg     import SVGStack, filled_polygon, Path, Line, Polygon
+from simplesvg     import SVGStack, SVG, filled_polygon, Line, Polygon
 from simplesvg.lib import TickDecorations, ArcDecorations
 
 from src.options import defaults
@@ -22,16 +22,16 @@ if __name__ == '__main__':
     pts = Points(common=Point_(0,0), squat=Point_(-1,0), slim=Point_(1,0),
         apex=Point_(-(1+sqrt(5))/4, -(sqrt(15)+sqrt(3))/4) )
 
-    pgonAttrs = {'stroke-width' : '0', 'fill-opacity' : .7}
-    lineAttrs = {'stroke' : 'black',   'stroke-width' : .0065*SCL, 'fill-opacity' : 0}
-    decAttrs  = {'stroke' : 'black',   'stroke-width' : .004* SCL}
+    pgonAttrs = {'stroke-width' : '0px', 'fill-opacity' : .7}
+    lineAttrs = {'stroke' : 'black',   'stroke-width' : '{:f}px'.format(.0065*SCL), 'fill-opacity' : 0}
+    decAttrs  = {'stroke' : 'black',   'stroke-width' : '{:f}px'.format(.004* SCL)}
 
     arcs  =  ArcDecorations(radius=0.08*SCL, spacing=0.015*SCL)
     ticks = TickDecorations(length=0.08*SCL, spacing=0.02*SCL)
 
     # horizontal, vertical margins = .1, .1
     # apex y-coordinate is -1.401, convenient!
-    stk = SVGStack(width=2.2*SCL, height=1.6*SCL)
+    stk = SVGStack(SVG('Unit Pair', width=2.2*SCL, height=1.6*SCL))
 
     stk.add(filled_polygon((pts.common, pts.apex, pts.squat),
         defaults.colors.squat, **pgonAttrs))
