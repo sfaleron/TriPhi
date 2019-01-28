@@ -5,7 +5,7 @@ from __future__ import absolute_import
 import  os.path     as osp
 from       math import sin, cos
 
-from  simplesvg import Polygon, Text, Line, StyledElement, filled_polygon
+from  simplesvg import Polygon, Text, Line, Path, filled_polygon
 from   .keyattr import KeywordToAttr, kw2aDec, AttribItem
 from   .options import standardSide
 
@@ -99,7 +99,7 @@ def rays(stk, pts1, pts2, flip, name, **kw):
         raise ValueError('Point sequences much be of equal length.')
 
     stk.push_defs()
-    stk.push_clip('trim'),
+    stk.push_clippath('trim'),
     stk.add(Polygon(pts1))
 
     stk.pop(); stk.pop()
@@ -135,7 +135,7 @@ def _(stk, side, center):
         center.x, center.y, side/standardSide))
 
     return LayerInfo(
-        path = stk.add(StyledElement('path', **attribs)) )
+        path = stk.add(Path(**attribs)) )
 
 @layerReg('labels')
 @disabledLayer

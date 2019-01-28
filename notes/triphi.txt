@@ -396,14 +396,17 @@ Summary:
 Q3=60
 S3=120
 
-S2=Q1 = 60-S1 = 120-Q2
+S2=Q1
+
+S1+Q1 = Q2-S1 = 60
 
 sinS2=sinQ1=sqrt(3/8)=sqrt(6)/4
+
 
 s1,q1 = 1
 s2,q2 = phi
 
-s3 = sqrt(3+sqrt(5)) = sqrt(5/2)+sqrt(1/2) = (sqrt(10) + sqrt(2))/2
+s3 = sqrt(3+sqrt(5)) = sqrt(5/2)+sqrt(1/2) = (sqrt(10) + sqrt(2))/2 = phi*sqrt(2)
 q3 = sqrt(2)
 
 Areas of slim, squat are (sqrt(3)+sqrt(15))/8

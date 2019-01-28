@@ -1,7 +1,7 @@
 
 try to get rid of adb dependency, or make adb presentable
 
-triphi.txt has some redundancy. checks are good, but I think it goes beyond that. Better formatting would be nice somehow. Maybe jupityr notebooks?
+triphi.txt has some redundancy. checks are good, but I think it goes beyond that. Better formatting would be nice somehow. Maybe jupityr notebooks? yacas supports jupityr, mathcha.io is pleasant for presenting results or generating SVG.
 
 Glyph is good for no rotation/flip. That's probably fine, but some thoughts..
   even out the space perpendicularly from the rays to the glyph, probably weighing the pointy end less. convex hull might help a lot, but it's less obvious how to define the pointy tail. actually, it isn't that hard, the convex hull would be highly pointy.
@@ -9,10 +9,22 @@ Glyph is good for no rotation/flip. That's probably fine, but some thoughts..
   interactively adjust position based on parameters, probably with some interpolation
 
 PNG output with cairo?
-svglib to reportlab looks more direct? be nice if it was all-free
-cairosvg looks not so bad, but setting up cairo might be hairy, and requires python3
-  it claims a compiler is required for windoze.. that doesn't sound right
+  svglib to reportlab looks more direct? be nice if it was all-free
+  cairosvg looks not so bad, but setting up cairo might be hairy, and requires python3
+    it claims a compiler is required for windoze.. that doesn't sound right
+  provide a cairosvg script but no dependency
 
 Align tile with an axis, two levgels of recursion. Haven't worked out how to tile otherwise.
 
 In inkscape, turn off all tiles except a flipped pair, select all, resize page to selection, turn tiles back on, export to bitmap! IRfanview will make a tiling from the unit tile.
+
+unit pair could use some text labels and maybe a sidebar with values for sides, angles, and area. Maybe a table with slim/squat columns.
+
+that's three sides, three angles, area x2 is fourteen items
+2 shared sides = 4 total
+1 shared angle = 5 total
+1 shared area  = 1 total
+
+so four extra items, two extra rows out of seven. not going to fuss about that. trying something else would probably be less visually useful, even if it took up a little less space. it might be nice to layout the shared items together, maybe spread out horizontally into the space next to the slim side.
+
+
