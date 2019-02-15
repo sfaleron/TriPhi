@@ -1,0 +1,504 @@
+
+Preliminary Note
+================
+
+The standard order of operations is violated in several expressions, to improve clarity. Ambiguity is avoided, however. When a sequence of unspaced multiplications appears in the "denominator" of a quotient, it is indicated that the product is found first, then this is taken as the divisor.
+
+
+Definitions
+===========
+
+"TriPhi" or "Full Figure" is the original geometrical figure, originally sourced from http://www.cut-the-knot.org/do_you_know/Buratino7.shtml, which cites a Facebook post. It is an equilateral triangle.
+
+"Unit Pair" refers to a subset of the full figure, containing the unusual features of the full figure, that is repeated at each of its vertices. It consists of two triangles joined along an equal side such that the union is also a triangle, with the vertex of the union consisting of a vertex from each of the component triangles is one of the vertices of the full figure. Using the angle names defined below, Q1+S1=60.
+
+The Unit Pair is constructed with a side horizontal, the side consisting of the colinear sides of the components. The component on the left side of the figure is referred to as "squat" and the other as "slim", in reference to their overall shape. Sides and angles of the squat triangle use the initial "q", while slim uses "s".
+
+The General and Special Cases are triangle unions analogous to the Unit Pair but with arbitrary parameters, except as constrained by the overall geometery. The Unit Pair is an example of a particular parameterization of the Special Cases.
+
+Designations
+------------
+
+The Unit Pair side and angle names match that of the Full Figure. The General and Special Cases change a few names:
+
+Before | After
+-------+------
+s1, q1 =   a
+s2, q2 =   b
+q3     =   x
+s3     =   y
+
+The angles keep their original designations, as the substitutions preserve only size, not identity. An additional angle "QS" is used to designate the vertex of the triangle union where vertices of both component triangles join.
+
+
+
+Overview
+========
+
+General Case
+------------
+
+The General Case is the triangular union of two triangles with two equal sides. This requires that the angles at which the equal sides join are complementary, such that both triangles have the same base and height, and the union has twice the base and equal height.
+
+
+Special Case
+------------
+
+The Unit Pair belongs to a class of triangle unions with a few (equivalent?) interesting properties, each of which has a dual nature, that align with corresponding dualities in the other properties:
+  A pair of alternate noncomplementary angles are equal, either Q1/S2 or Q2/S1
+  The apex (S1+Q1) is equal to one of the complementary angles
+  The ratio a/b is equal to x/y or y/x
+    The ratio of numerators and denominators is fixed at sqrt(2)
+
+         | Q1=S2 | Q2=S1 |
+---------+-------+-------+
+  apex   |   Q3  |   S3  |
+   x/y   |  a/b  |  b/a  |
+ sqrt(2) |  x/a  |  y/a  |
+         |  y/b  |  x/b  |
+
+
+Both pairings exist for any Q3/S3 selection.
+
+Equivalency of these properties is not fully established.
+  Assuming a/b=x/y implies x/a=y/b=sqrt(2).
+    QS=S3, Q1=S2
+  Setting the apex equal to one of the complementary angles implies the corresponding pair are equal.
+
+
+Right Pair
+----------
+
+Something to investigate is to split the union by dropping an altitude from the apex, forming two right triangles, squat prime and slim prime. x,y,Q2,S2,QS (but not Q1,S1) are preserved. aq+as equals 2*a even if the apex hangs off an end, if the distance to the near end is negative.
+
+The altitude is parallel to the y-axis and passes through the apex; therefore, its x-intercept is b*cosS3. Its length is b*sinS3.
+
+as = a - b*cosS3
+aq = b*cosS3 + a
+
+b*cosS3 = (x^2 - y^2) / 4*a
+b*cosS3 = (a^2 + b^2 - y^2) / 2*a
+
+bpr = b*sinS3
+
+squat prime hyp:  x
+squat prime legs: bpr, aq
+
+slim  prime hyp:  y
+slim  prime legs: bpr, as
+
+S1pr = 90 - S2
+Q1pr = 90 - Q2
+
+aq+as=2*a
+
+bpr^2 + aq^2 = x^2
+bpr^2 + as^2 = y^2
+
+aq  = (x^2 - y^2) / 4*a + a
+as  = (y^2 - x^2) / 4*a + a
+
+bpr = sqrt(8*(x^2+y^2) - ((y^2-x^2) / a)^2 - 16*a^2) / 4
+    = b*sinS3
+
+
+Right Unit Pair
+---------------
+
+aq = (sqrt(2) - sqrt(10)) / 8 + 1
+as = (sqrt(10) - sqrt(2)) / 8 + 1
+
+
+bpr = sqrt(6*(3 + sqrt(5))) / 4
+    = ( sqrt(4) + sqrt(15)) / 4
+    = phi * sqrt(3)/2
+
+
+From Trig
+sinS2   = sinQ1 = sqrt(3/8) = bpr/y
+
+phi*sqrt(3/4) / phi*sqrt(2) = sqrt(3/8)
+
+sinQ1pr = aq/x
+        = sqrt(2) / 8*a * (4*a^2 + x^2 - y^2)
+
+
+
+withdraw unfinished math and push the bloody code, decorations or not
+actually, do the labels
+then get the PCG code moving
+
+
+Fundemental Relationships
+=========================
+
+Q1+S1       = QS
+
+Q1+Q2+Q3    = 180
+S1+S2+S3    = 180
+QS+Q2+S2    = 180
+
+
+cosQ3 = (a^2 + b^2 - x^2) / 2*a*b
+cosQ2 = (a^2 + x^2 - b^2) / 2*a*x
+cosQ1 = (b^2 + x^2 - a^2) / 2*b*x
+
+cosS3 = (a^2 + b^2 - y^2) / 2*a*b
+cosS2 = (a^2 + y^2 - b^2) / 2*a*y
+cosS1 = (b^2 + y^2 - a^2) / 2*b*y
+
+cosQS = (x^2 + y^2-4*a^2) / 2*x*y
+cosQ2 = (x^2+4*a^2 - y^2) / 4*x*a
+cosS2 = (y^2+4*a^2 - x^2) / 4*y*a
+
+sinQ1/a = sinQ2/b = sinQ3/x = DQ
+sinS1/a = sinS2/b = sinS3/y = DS
+
+sinQS / 2*a = sinQ2/y = sinS2/x = DT
+
+DQ = 2*A / a*b*x
+DS = 2*A / a*b*y
+DT = 4*A / 2*a*x*y = 2*A / a*x*y
+
+For the sufficiently masochistic, the circumdiameter for any tiangle with sides a,b,c is:
+D = sqrt(2*a^2*b^2 + 2*a^2*c^2 + 2*b^2*c^2 - a^4 - b^4 - c^4) / 2*a*b*c
+
+Q3/S3 are Complemetary
+----------------------
+
+Q3+S3       = 180
+
+Which implies that:
+Q1+Q2       = S3
+S1+S2       = Q3
+
+cosQ3   = -cosS3
+sinQ3   =  sinS3
+
+
+Areas are equal, setting Heron's formulae equal yields:
+x^2+y^2 = 2*a^2+2*b^2
+
+
+General Parameterization
+========================
+
+Set a=1, for a uniform scale.
+
+Set dx, dy of apex, or b, S3 for polar/direct
+
+dx, dy:
+   b = sqrt( dx^2 + dy^2)
+
+b, S3:
+   dx = b*cos(S3)
+   dy = b*sin(S3)
+
+x = sqrt((dx+a)^2 + dy^2)
+y = sqrt((dx-a)^2 + dy^2)
+
+
+dx,dy = q1/s1, position of apex
+q1/s1 lie on the x-axis, one either side of the y-axis.
+
+
+There's only two degrees of freedom, plus scale. Fix a=1 to set a uniform scale.
+
+An alternate is to specify the apex in polar form. This specifies b and S3 directly. The triangle with base on the positive x-axis is always the "slim" triangle with third side "y" and "S" angles, even if an acute S3 makes it "squat".
+
+
+Equal Areas and Complementarity
+===============================
+
+The slim/squat triangles have two equal sides and equal areas. Does that imply anything interesting? In the unitpair figure, equal areas are a consequence of equal bases and heights. This is a consequence of the angles between the equal sides being complementary. This is a sufficient condition, is it also necessary?
+
+Mathomatic version 16.0.5
+Copyright (C) 1987-2012 George Gesslein II.
+200 equation spaces available in RAM; 2 megabytes per equation space.
+ANSI color mode enabled; manage by typing "help color".
+Anything done here is temporary, unless it is saved or redirected.
+1-> (s*(s-a)*(s-b)*(s-c))^.5
+
+                                1
+#1: (s*(s - a)*(s - b)*(s - c))^-
+                                2
+
+1-> replace s with (a+b+c)/2
+
+                 (a + b + c)       (a + b + c)       (a + b + c)
+    (a + b + c)*(----------- - a)*(----------- - b)*(----------- - c)
+                      2                 2                 2           1
+#1: -----------------------------------------------------------------^-
+                                    2                                 2
+
+1-> #1^2
+
+                 (a + b + c)       (a + b + c)       (a + b + c)
+    (a + b + c)*(----------- - a)*(----------- - b)*(----------- - c)
+                      2                 2                 2
+#2: -----------------------------------------------------------------
+                                    2
+
+2-> #2*16
+
+                   (a + b + c)       (a + b + c)       (a + b + c)
+#3: 8*(a + b + c)*(----------- - a)*(----------- - b)*(----------- - c)
+                        2                 2                 2
+
+3-> expand
+
+#3: (2*a^2*c^2) - a^4 + (2*a^2*b^2) - b^4 + (2*b^2*c^2) - c^4
+
+3-> #3+a^4+b^4-2*a^2*b^2
+#4: (2*a^2*c^2) - a^4 + (2*a^2*b^2) - b^4 + (2*b^2*c^2) - c^4 + a^4 + b^4 - (2*a^2*b^2)
+
+4-> simplify
+
+#4: (2*c^2*(a^2 + b^2)) - c^4
+
+4-> copy
+
+#5: (2*c^2*(a^2 + b^2)) - c^4
+
+4-> replace c with x
+
+#4: (2*x^2*(a^2 + b^2)) - x^4
+
+4-> #5
+
+#5: (2*c^2*(a^2 + b^2)) - c^4
+
+5-> replace c with y
+
+#5: (2*y^2*(a^2 + b^2)) - y^4
+
+5-> #4=#5
+
+#6: (2*x^2*(a^2 + b^2)) - x^4 = (2*y^2*(a^2 + b^2)) - y^4
+
+6-> (2*x^2*(a^2 + b^2)) -(2*y^2*(a^2 + b^2))=x^4 - y^4
+
+#7: (2*x^2*(a^2 + b^2)) - (2*y^2*(a^2 + b^2)) = x^4 - y^4
+
+7-> simplify
+
+#7: 2*(x^2 - y^2)*(a^2 + b^2) = x^4 - y^4
+
+
+osay, that's a difference of squares!
+
+2*(x^2 - y^2)*(b^2 + a^2) = (x^2 + y^2)*(x^2 - y^2)
+
+2*b^2 + 2*a^2 = x^2 + y^2 (1)
+
+A circle.. interesting!
+
+What does this relationship imply about the angles?
+
+
+Law of Cosines
+x^2 = a^2 + b^2 - 2*a*b*cosQ3 (2a)
+y^2 = a^2 + b^2 - 2*a*b*cosS3 (2b)
+
+x^2 + 2*a*b*cosQ3 = a^2 + b^2
+y^2 + 2*a*b*cosS3 = a^2 + b^2
+
+x^2 + 2*a*b*cosQ3 = y^2 + 2*a*b*cosS3 (3)
+
+Back to 2a,2b
+x^2 = a^2 + b^2 - 2*a*b*cosQ3
+y^2 = a^2 + b^2 - 2*a*b*cosS3
+
+x^2 + y^2 = 2*a^2 + 2*b^2 - 2*a*b*cosQ3 - 2*a*b*cosS3
+
+Substitute from (1)
+2*a^2 + 2*b^2 = 2*a^2 + 2*b^2 - 2*a*b*cosQ3 - 2*a*b*cosS3
+0 = - 2*a*b*cosQ3 - 2*a*b*cosS3
+
+cosQ3 = -cosS3 (4)
+
+Substitute (4) into (3)
+x^2 - 2*a*b*cosS3 = y^2 + 2*a*b*cosS3
+x^2 - y^2 = 4*a*b*cosS3
+
+cosS3 = (x^2 - y^2)/4/a/b (5a)
+cosQ3 = (y^2 - x^2)/4/a/b (5b)
+
+
+All internal angles of a triangle are less than 180 degrees. Opposite signs for cosine within this interval are spaced equally on either side of 90 degrees. This implies complementarity:
+
+(a+b)/2 = 90
+a+b = 180
+
+
+Matching Alternate Angles
+=========================
+
+It is apparant from the full TriPhi diagram that S1+Q1=60 and (due to the four small equilaterals that comprise the inner triangle and opposite angles equal) that Q3=60. It isn't hard to show that this implies that Q1=S2.
+
+S1+S2+S3 = 180, S3 = 120: S1+S2 = 60
+
+Q1+S1 = 60, Q1 = 60-S1
+S1+S2 = 60, S2 = 60-S1: S2=Q1
+
+What is needed is that the apex equal one of the complementary angles opposite it.
+
+QS=S3
+
+180-Q2-S2=180-S2-S1
+-Q2=-S1
+Q2=S1
+
+QS=Q3
+180-Q2-S2=180-Q2-Q1
+S2=Q1
+
+Can this work for any angle?
+
+Gee, the first example I tried broke in an obvious way. An equilateral and a 30-30-120!
+
+Now, is there a continuum subset or is the TriPhi the unique solution?
+
+Numerically, it isn't hard to perturb one parameter and find the correction in the other to restore equivalency. Also, the complementary angle reverses the Q1=S2, Q2=S1 selection. Also, it reverses the QS eqality! Rather than S3, it is equal to Q3. This means we have to constrain S3/Q3 to under ninety degrees, if the equality is to remain valid.
+
+QS=S3 iff S3<90, Q3>90
+
+so, when we parameterize by one of the complementary angles, QS is only equal up to ninety degrees, and then it's equal to the other. Keeping the parameter is easier than keeping the equivalency, so if the parameter is greater than ninety degrees, use the complement.
+
+Is there a nice parameterization?
+
+S3 is a parameter already. Find b such that QS equals S3 or 180-S3.
+
+a  = 1
+dx = b*cos(S3)
+dy = b*sin(S3)
+
+x = sqrt((dx+a)^2 + dy^2)
+y = sqrt((dx-a)^2 + dy^2)
+
+LoC is a disaster, don't go there. LoS will actually work!
+
+For 0<S3<90, QS=S3:
+
+sinQS/2 = sinS2/x
+replace sinQS with sinS3
+solve for sinS2
+sinS2/b = sinS3/y
+replace sinS2 with #1
+replace sinS3 with 1
+replace x with ((dx+1)^2 + dy^2)^.5
+replace y with ((dx-1)^2 + dy^2)^.5
+replace dx with b*cosS3
+replace dy with b*sinS3
+replace sinS3 with (1-cosS3^2)^.5
+replace cosS3 with c
+
+Let's fork.
+  Following through with Mathomatic:
+    solve for b
+    replace sign0 with 1
+    simplify sign
+
+    b = sqrt(2*(c^2 -/+ sqrt(c^2 + c^4)) + 1)
+    b = sqrt(2*c^2 -/+ 2*c*sqrt(c^2 + 1) + 1)
+
+  Simplify, then use Wolfram Alpha
+    simplify
+    2*b = sqrt(b^2 - 2*b*c + 1) * sqrt(b^2 + 2*b*c + 1)
+    This isn't so hard to do by hand.
+      Square both sides, find b^2 by the Quadratic Formula, and root the result.
+        Ends up with the Mathomatic result, modulo factoring choices.
+    Wolfram Alpha: solve 2*b = sqrt(b^2 + 2*b*c + 1) * sqrt(b^2 - 2*b*c + 1) and b>0 and 0<c<1 for b
+      b = sqrt(c^2+1) -/+ c
+
+the selection of sign selects the matched pair.
+That's what I'm talking about!
+
+Radical denesting doesn't work here. Equality is simple enough to demonstrate once both expressions are at hand: evidently, the Alpha result is the root of the expression under the radical on the other side. With the right factoring and grouping, this isn't terribly hard to see.
+
+sqrt(c^2+1) -/+ c = sqrt(2*c^2 -/+ 2*c*sqrt(c^2 + 1) + 1)
+
+(sqrt(c^2+1) -/+ c)^2 = 2*c^2 + 1 -/+ 2*c*sqrt(c^2 + 1)
+
+This isn't too hard to unpack now. With a,b,u,v as general parameters,
+
+(a -/+ b)^2 = a^2 + b^2 -/+ 2*a*b
+
+(sqrt(u) -/+ v)^2 = u+v^2 -/+ 2*v*sqrt(u)
+
+Considering 2*c^2 -/+ 2*c*sqrt(c^2 + 1) + 1, we have
+  u     = c^2+1.
+  u+v^2 = 2*c^2+1
+  v^2   = c^2
+  v     = c
+
+  which indeed satisfies the identity.
+
+
+Matching Ratios
+
+===============
+
+Is it necessary that a/b = x/y? Equivalently, a*y = b*x?.
+
+Sometimes, it equals the reciprocal of the other, when the complementary angles are reversed. This suggests that the condition for two equal angles must hold, which makes sense.
+
+QS = Q3
+Q1 = S2
+
+Why the asymmetry? Consider the case of Q3=S3=90, small triangles are congruent. Hold a,b constant, therefore a/b constant, x=y, but x/y's side of unity alternates depending on which of Q3/S3 are acute/obtuse.
+
+Starting with the angle equalities wasn't working for me; let's try the other way.
+
+Start with the hyper-ellipsoid, add the condition that the ratios are equal, and then see what falls out.
+
+x^2+y^2 = 2*a^2 + 2*b^2
+
+y = sqrt(2)*b and
+x = sqrt(2)*a. Obviosuly, the ratios of x:a and y:b are equal, or a:b and x:y would not be.
+
+I've been looking for some geometrical help with all this algebra. Looks like a square jumping out at me!
+
+show that QS = Q3 and Q1 = S2..
+
+sinQ3 =  sinS3
+cosQ3 = -cosS3
+
+cosQ3 = (a^2 + b^2 - x^2) / 2*a*b
+cosQ2 = (a^2 + x^2 - b^2) / 2*a*x
+cosQ1 = (b^2 + x^2 - a^2) / 2*b*x
+
+cosS3 = (a^2 + b^2 - y^2) / 2*a*b
+cosS2 = (a^2 + y^2 - b^2) / 2*a*y
+cosS1 = (b^2 + y^2 - a^2) / 2*b*y
+
+cosQS = (x^2 + y^2-4*a^2) / 2*x*y
+cosQ2 = (x^2+4*a^2 - y^2) / 4*x*a
+cosS2 = (y^2+4*a^2 - x^2) / 4*y*a
+
+
+cosQS = (x^2 + y^2-4*a^2) / 2*x*y
+cosQ3 = (a^2 + b^2 - x^2) / 2*a*b
+cosS3 = (a^2 + b^2 - y^2) / 2*a*b
+
+
+QS = Q3
+(x^2 + y^2-4*a^2) / 2/x/y = (a^2 + b^2 - x^2) / 2/a/b
+replace y with b*2^.5
+replace x with a*2^.5
+simplify
+yup!
+
+Q1 = S2a
+(b^2 + x^2 - a^2) / 2/b/x = (a^2 + y^2 - b^2) / 2/a/y
+yup!
+
+S2a = S2b
+Q1  = S2b by transitivity
+(a^2 + y^2 - b^2) / 2/a/y = (y^2+4*a^2 - x^2) / 4/y/a
+yup!
+
+
+BTW..
+cosQ2 = sqrt(2)*(3-(b/a)^2)/4
+cosS1 = sqrt(2)*(3-(a/b)^2)/4

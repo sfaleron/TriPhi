@@ -350,11 +350,16 @@ https://en.wikipedia.org/wiki/Trigonometric_constants_expressed_in_real_radicals
 
 apply to s3 = sqrt(3+sqrt(5))
 
-radical reduction:
+radical denesting:
   a=3,b=1,c=5
   R=sqrt(9-5)=2
 
 s3 = sqrt(5/2)+sqrt(1/2) = sqrt(10)/2 + sqrt(2)/2
+
+The single-step expression isn't pleasant:
+sqrt(a +/- b*sqrt(c)) = (sqrt(a + sqrt(a^2 - b^2*c)) +/- sqrt(a - sqrt(a^2 - b^2*c))) / sqrt(2)
+
+One can see that to get a useful expression, a^2-b^2*c should be a square.
 
 Python 3.7.0 (default, Sep 15 2018, 19:13:07)
 [GCC 8.2.1 20180831] on linux
@@ -390,13 +395,15 @@ Calculating...
                        2
 
 
-
 Summary:
 
 Q3=60
 S3=120
 
-S2=Q1
+Q1+S1 = 60
+S1+S2 = 60
+
+therefore, S2=Q1
 
 S1+Q1 = Q2-S1 = 60
 

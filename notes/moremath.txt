@@ -1,56 +1,40 @@
 
-The slim/squat triangles have two equal sides and equal areas. Does that imply anything interesting?
+Find the other angles in terms of a,b,x,y
+See if they share an angle
+organize, this is out of order!
 
-Substitutions:
-a=s1,q1 = 1
-b=s2,q2 = phi
-x=s3    = sqrt(3+sqrt(5))
-y=q3    = sqrt(2)
 
-The angles keep their original designations, as the substitutions preserve only length, not identity.
 
-Setting Heron's Formulae equal gives
 
-((2*((a^2*(b^2 + x^2)) + ((b*x)^2))) - a^4 - b^4 - x^4)/16 =
-((2*((a^2*(b^2 + y^2)) + ((b*y)^2))) - a^4 - b^4 - y^4)/16
 
-2*((a^2*(b^2 + x^2)) + ((b*x)^2)) - a^4 - b^4 - x^4 =
-2*((a^2*(b^2 + y^2)) + ((b*y)^2)) - a^4 - b^4 - y^4
+Specific Considerations
 
-2*((a^2*(b^2 + x^2)) + ((b*x)^2)) - x^4 = 2*((a^2*(b^2 + y^2)) + ((b*y)^2)) - y^4
+Length Substitutions
+a = 1
+b = phi
+x = sqrt(2)
+y = sqrt(3+sqrt(5))
 
-a^2*(b^2 + x^2) + ((b*x)^2) - ((a^2*(b^2 + y^2)) + ((b*y)^2)) = (x^4 - y^4)/2
 
-mathomatic doesn't seem to cancel across equal signs :(
-
-a^2*(b^2 + x^2) + (b*x)^2 - a^2*(b^2 + y^2) - (b*y)^2 = (x^4 - y^4)/2
-
-(b*x)^2 - (b*y)^2 + a^2*(b^2 + x^2) - a^2*(b^2 + y^2) = (x^4 - y^4)/2
-
-expanding terms collapses LHS!
-(x^2 - y^2)*(b^2 + a^2) = (x^4 - y^4)/2
-
-osay, that's a difference of squares!
-
-(x^2 - y^2)*(b^2 + a^2) = (x^2 + y^2)*(x^2 - y^2)/2
-
-2b^2 + 2a^2 = x^2 + y^2
+A circle can be parameterized by angle, and our pair of triangles is characterized by a shared angle, asin(sqrt(3/8)). What's the relationship?
 
 2 + 2*phi^2 = x^2 + y^2
 2+3+sqrt(5) = x^2 + y^2
   5+sqrt(5) = x^2 + y^2
 
-radical reduction:
+radical denesting:
   a=5,b=1,c=5
   R=sqrt(25-5) = 2*sqrt(5)
+
+sqrt(5+sqrt(5)) =
 
 sqrt( 5/2+sqrt(5))   + sqrt(5/2-sqrt(5))
 
 sqrt(10+4*sqrt(5))/2 + sqrt(10-4*sqrt(5))/2
 
-A circle.. interesting!
+Flip the circular relation. Fix x,y, variable a,b:
 
-A circle can be parameterized by angle, and our pair of triangles is characterized by a shared angle, asin(sqrt(3/8)). What's the relationship?
+(5+sqrt(5)/2 = a^2 + b^2
 
 Curious.. do two equal sides and equal area imply a shared angle?
 
@@ -70,33 +54,33 @@ Anything done here is temporary, unless it is saved or redirected.
 
 1-> cosS2=(a*a+x*x-b*b)/2/a/x
 
-           ((a*a) + (x*x) - (b*b))
+            ((a*a) + (x*x) - (b*b))
 #2: cosS2 = -----------------------
-                   (2*a*x)
+                    (2*a*x)
 
 2-> sinS2=(1-cosS2*cosS2)**.5
 
-                             1
+                                1
 #3: sinS2 = (1 - (cosS2*cosS2))^-
-                             2
+                                2
 
 3-> replace cosS2 with #2
 
-                ((a^2 + x^2 - b^2)^2)  1
+                 ((a^2 + x^2 - b^2)^2)  1
 #3: sinS2 = (1 - ---------------------)^-
-                     (4*a^2*x^2)       2
+                      (4*a^2*x^2)       2
 
 3-> replace x with #1
 
-                   (((2*a^2) + (a*b))^2)     1
+                    (((2*a^2) + (a*b))^2)     1
 #3: sinS2 = (1 - ---------------------------)^-
-                (4*a^2*(a^2 + b^2 + (a*b)))  2
+                 (4*a^2*(a^2 + b^2 + (a*b)))  2
 
 3-> simplify
 
-                   3*b^2        1
-           (-------------------^-)
-            (a^2 + (a*b) + b^2) 2
+                    3*b^2        1
+            (-------------------^-)
+             (a^2 + (a*b) + b^2) 2
 #3: sinS2 = -----------------------
                       2
 
@@ -122,3 +106,25 @@ sin(t) = y/r
        = sqrt((5-sqrt(5))/10)
 
 tan(t) = y/x = 1/phi = phi-1 = (sqrt(5)-1)/2
+
+
+Actually, that quadratic equation could have any combination of constant and variable terms: choose(4,1)+choose(4,2)+choose(4,3)+choose(4,4)=4+6+4+1=15, six ways to get circles, although really, the only interesting ones pair up a,b and x,y into two circles, or do all four in one big, fabulous, 4-ellipsoid! That might be fun to play with later, but circles will satisfy us for now.
+
+r^2 = (x^2 + y^2)/2
+
+cos(t) = a/r
+       = sqrt((5-sqrt(5))/10)
+
+sin(t) = b/r
+       = sqrt((3+sqrt(5))/(5+sqrt(5)))
+
+tan(t) = phi
+
+That's tidy. What happens if x/y or a/b change places?
+Right, same thing. No change in r term, sin/cos exchange.
+
+This is curious. It isn't surprising that r is very similar in both cases; it is plainly different by a factor of sqrt(2). There is a close relationship between a,x and b,y, only this factor of sqrt(2)!
+
+What isn't surprising is the (co)tangent. This implies that the ratios of cross pairs should be equal. Also, the assignation of a,b,x,y to sin() or cos() is arbitrary, so whether a pairs up with x or y is not well defined.
+
+This may be a consequence of the ratios a/b and x/y being equal?

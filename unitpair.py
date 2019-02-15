@@ -12,6 +12,15 @@ from src.keyattr import AttribItem, KeywordToAttr, kw2aDec
 
 SCL = 200
 
+class Scale(float):
+    def __new__(cls, x):
+        return float.__new__(cls, x*SCL)
+
+class Pixels(Scale):
+    def __str__(self):
+        return '{:f}px'.format(self)
+
+
 @kw2aDec
 class Points(KeywordToAttr):
     _attribs = map(AttribItem, ['common', 'apex', 'slim', 'squat'])
@@ -23,15 +32,15 @@ if __name__ == '__main__':
         apex=Point_(-(1+sqrt(5))/4, -(sqrt(15)+sqrt(3))/4) )
 
     pgonAttrs = {'stroke-width' : '0px', 'fill-opacity' : .7}
-    lineAttrs = {'stroke' : 'black',   'stroke-width' : '{:f}px'.format(.0065*SCL), 'fill-opacity' : 0}
-    decAttrs  = {'stroke' : 'black',   'stroke-width' : '{:f}px'.format(.004* SCL)}
+    lineAttrs = {'stroke' : 'black',   'stroke-width' : Pixels(.0065), 'fill-opacity' : 0}
+    decAttrs  = {'stroke' : 'black',   'stroke-width' : Pixels(.004)}
 
-    arcs  =  ArcDecorations(radius=0.08*SCL, spacing=0.015*SCL)
-    ticks = TickDecorations(length=0.08*SCL, spacing=0.02*SCL)
+    arcs  =  ArcDecorations(radius=Scale(0.08), spacing=Scale(0.015))
+    ticks = TickDecorations(length=Scale(0.08), spacing=Scale(0.02))
 
     # horizontal, vertical margins = .1, .1
     # apex y-coordinate is -1.401, convenient!
-    stk = SVGStack(SVG('Unit Pair', width=2.2*SCL, height=1.6*SCL))
+    stk = SVGStack(SVG('Unit Pair', width=Scale(2.2), height=Scale(1.6)))
 
     stk.add(filled_polygon((pts.common, pts.apex, pts.squat),
         defaults.colors.squat, **pgonAttrs))
@@ -48,7 +57,7 @@ if __name__ == '__main__':
     stk.add(arcs(pts.slim, pts.apex, pts.common, **decAttrs))
     stk.add(arcs(pts.apex, pts.squat, pts.common, **decAttrs))
 
-    stk.add(arcs(pts.apex, pts.slim, pts.squat, n=2, radius=0.12*SCL, **decAttrs))
+    stk.add(arcs(pts.apex, pts.slim, pts.squat, n=2, radius=Scale(0.12), **decAttrs))
     stk.add(arcs(pts.common, pts.apex, pts.squat, n=2, **decAttrs))
 
     # labels might be nice to have, and possibly a little box off to the side
