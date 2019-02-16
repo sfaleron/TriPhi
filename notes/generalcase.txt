@@ -10,9 +10,9 @@ Definitions
 
 "TriPhi" or "Full Figure" is the original geometrical figure, originally sourced from http://www.cut-the-knot.org/do_you_know/Buratino7.shtml, which cites a Facebook post. It is an equilateral triangle.
 
-"Unit Pair" refers to a subset of the full figure, containing the unusual features of the full figure, that is repeated at each of its vertices. It consists of two triangles joined along an equal side such that the union is also a triangle, with the vertex of the union consisting of a vertex from each of the component triangles is one of the vertices of the full figure. Using the angle names defined below, Q1+S1=60.
+"Unit Pair" refers to a subset of the full figure, containing the unusual features of the full figure, that is repeated at each of its corners. It consists of a triangular section, with a vertex, the "apex," shared with the full figure. A median drawn from the apex to the opposite side divides the section into a pair of triangles.
 
-The Unit Pair is constructed with a side horizontal, the side consisting of the colinear sides of the components. The component on the left side of the figure is referred to as "squat" and the other as "slim", in reference to their overall shape. Sides and angles of the squat triangle use the initial "q", while slim uses "s".
+The Unit Pair is constructed with a side horizontal, the side opposote the apex. The sub-triangle on the left side of the figure is referred to as "squat" and the other as "slim", in reference to their overall shape. Sides and angles of the squat triangle use the initial "q", while slim uses "s".
 
 The General and Special Cases are triangle unions analogous to the Unit Pair but with arbitrary parameters, except as constrained by the overall geometery. The Unit Pair is an example of a particular parameterization of the Special Cases.
 
@@ -23,8 +23,8 @@ The Unit Pair side and angle names match that of the Full Figure. The General an
 
 Before | After
 -------+------
-s1, q1 =   a
-s2, q2 =   b
+q1, s1 =   a
+q2, s2 =   b
 q3     =   x
 s3     =   y
 
@@ -39,6 +39,10 @@ General Case
 ------------
 
 The General Case is the triangular union of two triangles with two equal sides. This requires that the angles at which the equal sides join are complementary, such that both triangles have the same base and height, and the union has twice the base and equal height.
+
+The "general equation" for general cases might be
+
+x^2 + y^2 = 2*(a^2 + b^2)
 
 
 Special Case
@@ -64,6 +68,120 @@ Equivalency of these properties is not fully established.
   Assuming a/b=x/y implies x/a=y/b=sqrt(2).
     QS=S3, Q1=S2
   Setting the apex equal to one of the complementary angles implies the corresponding pair are equal.
+
+There are three equations defining the special cases:
+
+From the General Case
+x^2 + y^2 = 2*(a^2 + b^2)
+
+One for each duality
+b*x = a*y
+b*y = a*x
+
+
+Using the first duality (a/b = x/y),
+
+Mathomatic version 16.0.5
+Copyright (C) 1987-2012 George Gesslein II.
+200 equation spaces available in RAM; 2 megabytes per equation space.
+ANSI color mode enabled; manage by typing "help color".
+Anything done here is temporary, unless it is saved or redirected.
+1-> x^2+y^2=2*(a^2+b^2)
+
+#1: x^2 + y^2 = 2*(a^2 + b^2)
+
+1-> copy
+
+#2: x^2 + y^2 = 2*(a^2 + b^2)
+
+1-> replace x with aa*y/b
+
+     aa*y
+#1: (----^2) + y^2 = 2*(a^2 + b^2)
+      b
+
+1-> replace a with b*x/y
+
+     aa*y                b*x
+#1: (----^2) + y^2 = 2*((---^2) + b^2)
+      b                   y
+
+1-> replace aa with a
+
+     a*y                b*x
+#1: (---^2) + y^2 = 2*((---^2) + b^2)
+      b                  y
+
+1-> simplify
+
+          a                   x
+#1: y^2*((-^2) + 1) = 2*b^2*((-^2) + 1)
+          b                   y
+
+The parenthesized quantities are equal
+
+y^2 =  2*b^2
+y/b = sqrt(2)
+
+x/a must be equal to y/b if x/y = a/b
+x/a = sqrt(2)
+
+Repeating the process with x/y=b/a will produce an analogous result.
+
+
+An interesting question is how a parameterization of the section of an equilateral triangle corresponds to the continuum of general cases, and how many are special cases. Clearly, only one of the dual solutions will hold.
+
+
+It would be as easy as setting the length of a side of the section that coincides with a side of the equilateral, either "x" or "y", to a proportion of the side length of the equilateral. The side length is not fixed, though. What's fixed is a=1. The expression for side length isn't tricky though, it's just x+y.
+
+This is equivalent to inscribing triangles such that the vertices of the inner triangle divide the sides of the outer one in equal ratios, when measured in the same direction around the perimeter.
+
+We'll parameterize to the x side, with p ranging from 0 to 1.
+
+p = x/(x+y)
+x = p/(1-p)*y
+
+q = p/(1-p)
+x = q*y
+
+UnitPair has
+p = sqrt(2)/(sqrt(2)*(1+phi)) = 1/(1+phi) = (3-sqrt(5))/2
+
+
+(2*a)^2 = x^2 + y^2 - 2*x*y*cos60
+
+4 = x^2 + y^2 - x*y
+
+4 = q^2*y^2 + y^2 - q*y^2
+
+4 = y^2*(q^2-q+1)
+
+y^2 = 4 / (q^2-q+1)
+
+x^2 = 4*q^2 / (q^2-q+1)
+
+
+x^2 + y^2 = 2*(a^2 + b^2)
+
+(q^2 + 1) * y^2 = 2*(a^2 + b^2)
+
+4 * (q^2 + 1) / (q^2-q+1) = 2*(a^2 + b^2)
+
+2 * (q^2 + 1) / (q^2-q+1) = a^2 + b^2
+
+2 * (q^2 + 1) / (q^2-q+1) = 1 + b^2
+
+b^2 = 2 * (q^2 + 1) / (q^2-q+1) - 1
+
+b = sqrt(2 * (q^2 + 1) / (q^2-q+1) - 1)
+
+Wolfram Alpha simplified
+There's a curious form of "2" involved here that I could figure out; maybe later.
+
+b = sqrt(2*q / (q^2-q+1) + 1)
+
+
+That's a full description of all the triangle sides, the angles are straightforward to churn out, but do any have neat, tidy expressions?
 
 
 Right Pair
@@ -440,6 +558,8 @@ Matching Ratios
 ===============
 
 Is it necessary that a/b = x/y? Equivalently, a*y = b*x?.
+
+
 
 Sometimes, it equals the reciprocal of the other, when the complementary angles are reversed. This suggests that the condition for two equal angles must hold, which makes sense.
 

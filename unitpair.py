@@ -7,33 +7,26 @@ from simplesvg     import SVGStack, SVG, filled_polygon, Line, Polygon
 from simplesvg.lib import TickDecorations, ArcDecorations
 
 from src.options import defaults
-from src.math    import Point, sqrt
+from src.math    import Point, sqrt, make_scaler
 from src.keyattr import AttribItem, KeywordToAttr, kw2aDec
 
 SCL = 200
-
-class Scale(float):
-    def __new__(cls, x):
-        return float.__new__(cls, x*SCL)
-
-class Pixels(Scale):
-    def __str__(self):
-        return '{:f}px'.format(self)
-
 
 @kw2aDec
 class Points(KeywordToAttr):
     _attribs = map(AttribItem, ['common', 'apex', 'slim', 'squat'])
 
+Scale = make_scaler(SCL)
+
 if __name__ == '__main__':
-    Point_ = lambda a,b:SCL*(Point(a+1.1,b+1.5))
+    Point_ = lambda a,b: SCL*Point(a+1.1, b+1.5)
 
     pts = Points(common=Point_(0,0), squat=Point_(-1,0), slim=Point_(1,0),
         apex=Point_(-(1+sqrt(5))/4, -(sqrt(15)+sqrt(3))/4) )
 
     pgonAttrs = {'stroke-width' : '0px', 'fill-opacity' : .7}
-    lineAttrs = {'stroke' : 'black',   'stroke-width' : Pixels(.0065), 'fill-opacity' : 0}
-    decAttrs  = {'stroke' : 'black',   'stroke-width' : Pixels(.004)}
+    lineAttrs = {'stroke' : 'black', 'stroke-width' : Scale(.0065).px, 'fill-opacity' : 0}
+    decAttrs  = {'stroke' : 'black', 'stroke-width' : Scale(.0040).px}
 
     arcs  =  ArcDecorations(radius=Scale(0.08), spacing=Scale(0.015))
     ticks = TickDecorations(length=Scale(0.08), spacing=Scale(0.02))

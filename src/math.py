@@ -4,7 +4,7 @@ from  __future__ import absolute_import
 
 from        math import sin, cos, pi, atan2, sqrt
 
-from simplesvg.lib.math import Point, midpoint, between, dist
+from simplesvg.lib.math import Point, midpoint, between, dist, make_scaler
 
 
 # Construct a figure like that at http://www.cut-the-knot.org/do_you_know/Buratino7.shtml
