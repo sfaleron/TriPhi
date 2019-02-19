@@ -115,8 +115,8 @@ def rays(stk, pts1, pts2, flip, name, **kw):
     else:
         pts2 = rotate_right(pts2)
 
-    for p1, p2 in zip(pts1, pts2):
-        stk.add(Line(p1, p2, **kw))
+    for pt1, pt2 in zip(pts1, pts2):
+        stk.add(Line(pt1, pt2, **kw))
 
     stk.pop(); stk.pop()
 

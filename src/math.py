@@ -114,11 +114,11 @@ def inner(A, B, C, flip=False):
 #
 # It's worth pointing out there's no possible zeros in denominators here!
 #
-# At least if p1 and p2 are not the same point. Horizontal and vertical
+# At least if pt1 and pt2 are not the same point. Horizontal and vertical
 # sides work fine. This is the only condition (among real numbers) for
 # x1^2+x2^2+y1^2+y2^2 = 2*(x1*x2+y1*y2), according to Wolfram Alpha.
 #
-def triangles_from_side(p1, p2, sideLength=None):
+def triangles_from_side(pt1, pt2, sideLength=None):
     """Given two points defining a side, find the remaining vertices of
     the two equilateral triangles that share this side. A bit of
     calculating can be averted if the side length is handy when calling,
@@ -128,21 +128,21 @@ def triangles_from_side(p1, p2, sideLength=None):
     Returns two A,B,C triples, in counterclockwise order, in the same
     manner as two calls to outer()."""
 
-    midPt   = midpoint(p1, p2)
+    midPt   = midpoint(pt1, pt2)
 
     if sideLength is None:
         # sideLength is a sqrt, makes sense to combine radicals
-        a,b = 1, (p1.x-p2.x)**2 + (p1.y-p2.y)**2
+        a,b = 1, (pt1.x-pt2.x)**2 + (pt1.y-pt2.y)**2
     else:
         a,b = sideLength, 1
 
     k = a/2 * sqrt(3*b / (
-        p1.x**2 + p2.x**2 + p1.y**2 + p2.y**2 - 2*(p1.x*p2.x + p1.y*p2.y)))
+        pt1.x**2 + pt2.x**2 + pt1.y**2 + pt2.y**2 - 2*(pt1.x*pt2.x + pt1.y*pt2.y)))
 
-    p3a = Point(midPt.x - (p2.y-p1.y)*k, midPt.y + (p2.x-p1.x)*k)
-    p3b = Point(midPt.x + (p2.y-p1.y)*k, midPt.y - (p2.x-p1.x)*k)
+    pt3a = Point(midPt.x - (pt2.y-pt1.y)*k, midPt.y + (pt2.x-pt1.x)*k)
+    pt3b = Point(midPt.x + (pt2.y-pt1.y)*k, midPt.y - (pt2.x-pt1.x)*k)
 
-    return (make_ccw([p1,p2,p3a], midPt), make_ccw([p1,p2,p3b], midPt))
+    return (make_ccw([pt1,pt2,pt3a], midPt), make_ccw([pt1,pt2,pt3b], midPt))
 
 
 # flip the y for SVG

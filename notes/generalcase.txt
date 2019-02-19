@@ -38,7 +38,7 @@ Overview
 General Case
 ------------
 
-The General Case is the triangular union of two triangles with two equal sides. This requires that the angles at which the equal sides join are complementary, such that both triangles have the same base and height, and the union has twice the base and equal height.
+The General Case is the triangular union of two triangles with two equal sides. This requires that the angles at which the equal sides join are supplementary, such that both triangles have the same base and height, and the union has twice the base and equal height.
 
 The "general equation" for general cases might be
 
@@ -49,8 +49,8 @@ Special Case
 ------------
 
 The Unit Pair belongs to a class of triangle unions with a few (equivalent?) interesting properties, each of which has a dual nature, that align with corresponding dualities in the other properties:
-  A pair of alternate noncomplementary angles are equal, either Q1/S2 or Q2/S1
-  The apex (S1+Q1) is equal to one of the complementary angles
+  A pair of alternate nonsupplementary angles are equal, either Q1/S2 or Q2/S1
+  The apex (S1+Q1) is equal to one of the supplementary angles
   The ratio a/b is equal to x/y or y/x
     The ratio of numerators and denominators is fixed at sqrt(2)
 
@@ -67,7 +67,7 @@ Both pairings exist for any Q3/S3 selection.
 Equivalency of these properties is not fully established.
   Assuming a/b=x/y implies x/a=y/b=sqrt(2).
     QS=S3, Q1=S2
-  Setting the apex equal to one of the complementary angles implies the corresponding pair are equal.
+  Setting the apex equal to one of the supplementary angles implies the corresponding pair are equal.
 
 There are three equations defining the special cases:
 
@@ -131,12 +131,15 @@ Repeating the process with x/y=b/a will produce an analogous result.
 
 An interesting question is how a parameterization of the section of an equilateral triangle corresponds to the continuum of general cases, and how many are special cases. Clearly, only one of the dual solutions will hold.
 
-
 It would be as easy as setting the length of a side of the section that coincides with a side of the equilateral, either "x" or "y", to a proportion of the side length of the equilateral. The side length is not fixed, though. What's fixed is a=1. The expression for side length isn't tricky though, it's just x+y.
 
 This is equivalent to inscribing triangles such that the vertices of the inner triangle divide the sides of the outer one in equal ratios, when measured in the same direction around the perimeter.
 
-We'll parameterize to the x side, with p ranging from 0 to 1.
+Note that the matched pair of angles (if such a pair exists) is reversed if the figure is reflected about a vertical axis, so the duality can be restored by parameterizing with respect to the other side. This does not add to the set of solutions, however, but recapitulates them in reverse order. This simply follows from x+y being a constant.
+
+This implies that the matching angles will flip when x=y at p=1/2.
+
+We'll parameterize the x side, with p ranging from 0 to 1.
 
 p = x/(x+y)
 x = p/(1-p)*y
@@ -325,10 +328,10 @@ There's only two degrees of freedom, plus scale. Fix a=1 to set a uniform scale.
 An alternate is to specify the apex in polar form. This specifies b and S3 directly. The triangle with base on the positive x-axis is always the "slim" triangle with third side "y" and "S" angles, even if an acute S3 makes it "squat".
 
 
-Equal Areas and Complementarity
+Equal Areas and Supplementarity
 ===============================
 
-The slim/squat triangles have two equal sides and equal areas. Does that imply anything interesting? In the unitpair figure, equal areas are a consequence of equal bases and heights. This is a consequence of the angles between the equal sides being complementary. This is a sufficient condition, is it also necessary?
+The slim/squat triangles have two equal sides and equal areas. Does that imply anything interesting? In the unitpair figure, equal areas are a consequence of equal bases and heights. This is a consequence of the angles between the equal sides being supplementary. This is a sufficient condition, is it also necessary?
 
 Mathomatic version 16.0.5
 Copyright (C) 1987-2012 George Gesslein II.
@@ -443,7 +446,7 @@ cosS3 = (x^2 - y^2)/4/a/b (5a)
 cosQ3 = (y^2 - x^2)/4/a/b (5b)
 
 
-All internal angles of a triangle are less than 180 degrees. Opposite signs for cosine within this interval are spaced equally on either side of 90 degrees. This implies complementarity:
+All internal angles of a triangle are less than 180 degrees. Opposite signs for cosine within this interval are spaced equally on either side of 90 degrees. This implies supplementarity:
 
 (a+b)/2 = 90
 a+b = 180
@@ -459,7 +462,7 @@ S1+S2+S3 = 180, S3 = 120: S1+S2 = 60
 Q1+S1 = 60, Q1 = 60-S1
 S1+S2 = 60, S2 = 60-S1: S2=Q1
 
-What is needed is that the apex equal one of the complementary angles opposite it.
+What is needed is that the apex equal one of the supplementary angles opposite it.
 
 QS=S3
 
@@ -477,11 +480,11 @@ Gee, the first example I tried broke in an obvious way. An equilateral and a 30-
 
 Now, is there a continuum subset or is the TriPhi the unique solution?
 
-Numerically, it isn't hard to perturb one parameter and find the correction in the other to restore equivalency. Also, the complementary angle reverses the Q1=S2, Q2=S1 selection. Also, it reverses the QS eqality! Rather than S3, it is equal to Q3. This means we have to constrain S3/Q3 to under ninety degrees, if the equality is to remain valid.
+Numerically, it isn't hard to perturb one parameter and find the correction in the other to restore equivalency. Also, the supplementary angle reverses the Q1=S2, Q2=S1 selection. Also, it reverses the QS eqality! Rather than S3, it is equal to Q3. This means we have to constrain S3/Q3 to under ninety degrees, if the equality is to remain valid.
 
 QS=S3 iff S3<90, Q3>90
 
-so, when we parameterize by one of the complementary angles, QS is only equal up to ninety degrees, and then it's equal to the other. Keeping the parameter is easier than keeping the equivalency, so if the parameter is greater than ninety degrees, use the complement.
+so, when we parameterize by one of the supplementary angles, QS is only equal up to ninety degrees, and then it's equal to the other. Keeping the parameter is easier than keeping the equivalency, so if the parameter is greater than ninety degrees, use the supplement.
 
 Is there a nice parameterization?
 
@@ -561,7 +564,7 @@ Is it necessary that a/b = x/y? Equivalently, a*y = b*x?.
 
 
 
-Sometimes, it equals the reciprocal of the other, when the complementary angles are reversed. This suggests that the condition for two equal angles must hold, which makes sense.
+Sometimes, it equals the reciprocal of the other, when the supplementary angles are reversed. This suggests that the condition for two equal angles must hold, which makes sense.
 
 QS = Q3
 Q1 = S2
