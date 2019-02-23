@@ -37,7 +37,8 @@ if __name__ == '__main__':
 
     # horizontal, vertical margins = .1, .1
     # apex y-coordinate is -1.401, convenient!
-    stk = SVGStack(SVG('Unit Pair', width=Scale(2.2), height=Scale(1.6)))
+    stk = SVGStack( SVG('Unit Pair',
+        docFlags={'inkOffsetFix'}, width=Scale(2.2), height=Scale(1.6)) )
 
     stk.add(filled_polygon((pts.common, pts.apex, pts.squat),
         defaults.colors.squat, **pgonAttrs))
@@ -75,20 +76,20 @@ if __name__ == '__main__':
 
     kw = {'font-family': 'sans-serif', 'font-size': Scale(.05)}
 
-    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short', invert=True, dy=Scale(-.03), dx=Scale(-.1), **kw ))
+    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short', invert=True, dy=Scale(-.03), dx=Scale(-.05), **kw ))
     stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',               dy=Scale(-.03), **kw ))
-    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',               dy=Scale(-.03), dx=Scale(-.1), **kw ))
+    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',               dy=Scale(-.03), dx=Scale(.06), **kw ))
 
     stk.add(LineLabel(pts.common, pts.slim,   'interior short',              dy=Scale(.08), **kw ))
     stk.add(LineLabel(pts.common, pts.squat,  'interior short', invert=True, dy=Scale(.08), **kw ))
 
     kw.update({'font-style': 'oblique'})
 
-    stk.add(LineLabel(pts.apex,   pts.squat,  'q3', invert=True, dy=Scale(.06), dx=Scale(-.1), **kw ))
+    stk.add(LineLabel(pts.apex,   pts.squat,  'q3', invert=True, dy=Scale(.06), dx=Scale(-.05), **kw ))
     stk.add(LineLabel(pts.apex,   pts.slim,   's3',              dy=Scale(.06), **kw ))
 
-    stk.add(LineLabel(pts.apex,   pts.common, 'q2',              dy=Scale( .06), dx=Scale(.45), **kw ))
-    stk.add(LineLabel(pts.apex,   pts.common, 's2',              dy=Scale(-.03), dx=Scale(.45), **kw ))
+    stk.add(LineLabel(pts.apex,   pts.common, 'q2',              dy=Scale( .06), dx=Scale(.28), **kw ))
+    stk.add(LineLabel(pts.apex,   pts.common, 's2',              dy=Scale(-.03), dx=Scale(.28), **kw ))
 
     stk.add(LineLabel(pts.common, pts.squat,  'q1', invert=True, dy=Scale(-.06), **kw ))
     stk.add(LineLabel(pts.common, pts.slim,   's1',              dy=Scale(-.06), **kw ))
@@ -96,10 +97,10 @@ if __name__ == '__main__':
     kw.update({'font-size': Scale(.15), 'font-style': 'oblique'})
     uline = partial(TSpan, **{'text-decoration': 'underline'})
 
-    txt = stk.add(LineLabel(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.1375), **kw ))
+    txt = stk.add(LineLabel(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.08), **kw ))
     txt.add_many('S', uline('q'), 'uat')
 
-    txt = stk.add(LineLabel(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.5125), **kw ))
+    txt = stk.add(LineLabel(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.27), **kw ))
     txt.add_many(uline('S'), 'lim')
 
     stk.push_layer('legend', True)
