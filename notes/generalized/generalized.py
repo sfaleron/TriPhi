@@ -91,6 +91,11 @@ def make_images(fnhead, theta):
         img.save('{}{}.png'.format(fnhead, tail))
 
 if __name__ == '__main__':
+    # Command-line parameters:
+    #   length angle : display stats, with a given b
+    #          angle : display stats, with complementary b's defined by the angle
+    #   fnhead angle :   make images, with complementary b's defined by the angle
+
     import sys
 
     args = sys.argv[1:]
