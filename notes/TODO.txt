@@ -18,13 +18,12 @@ Align tile with an axis, two levgels of recursion. Haven't worked out how to til
 
 In inkscape, turn off all tiles except a flipped pair, select all, resize page to selection, turn tiles back on, export to bitmap! IRfanview will make a tiling from the unit tile.
 
-unit pair could use some text labels and maybe a sidebar with values for sides, angles, and area. Maybe a table with slim/squat columns.
 
-that's three sides, three angles, area x2 is fourteen items
-2 shared sides = 4 total
-1 shared angle = 5 total
-1 shared area  = 1 total
+Legend Layout is getting too tricky, and it keeps being tweaked. Make it a big block with the native layout side-by-side with the figure, rather than trying to fill in the void. Maybe make the void part of the native layout!
 
-so four extra items, two extra rows out of seven. not going to fuss about that. trying something else would probably be less visually useful, even if it took up a little less space. it might be nice to layout the shared items together, maybe spread out horizontally into the space next to the slim side.
+Add a proportional displacement to the label; only applies to x direction.
+Maybe not proprtional exactly. Maybe an anchor, that defaults to center.
 
+Add angle labels, find the bisector and position the label according to a displacement provided.
 
+Upload to Github!

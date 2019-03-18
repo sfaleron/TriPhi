@@ -230,6 +230,58 @@ q3 = sqrt(2)
 Calculating...
  answer = 1.6180339887499
 
+The commands only, very much clutter-reduced
+
+s3=(s1*s1+s2*s2+s1*s2)^.5
+cosS2=(s1*s1+s3*s3-s2*s2)/2/s1/s3
+sinS2=(1-cosS2*cosS2)**.5
+replace cosS2 with #2
+replace s3 with #1
+replace s1 with 1
+replace s2 with (1+5^.5)/2
+simplify
+
+
+The other angles, following this template
+
+s3=(s1*s1+s2*s2+s1*s2)^.5
+cosS1=(s2*s2+s3*s3-s1*s1)/2/s2/s3
+sinS1=(1-cosS1*cosS1)**.5
+replace cosS1 with #2
+replace s3 with #1
+replace s1 with 1
+replace s2 with (1+5^.5)/2
+repeat simplify
+                  1
+        3*(3 - (5^-))
+                  2   1
+sinS1 = -------------^-
+             16       2
+
+sinS1 = sqrt(9-3*sqrt(5))/4
+cosS1 = sqrt(7+3*sqrt(5))/4
+
+q3=(q1*q1+q2*q2-q1*q2)^.5
+cosQ2=(q1*q1+q3*q3-q2*q2)/2/q1/q3
+sinQ2=(1-cosQ2*cosQ2)**.5
+replace cosQ2 with #2
+replace q3 with #1
+replace q1 with 1
+replace q2 with (1+5^.5)/2
+simplify
+                     1    1
+        ((48*(3 + (5^-)))^-)
+                     2    2
+sinQ2 = --------------------
+                 16
+
+sinQ2 = sqrt(9+3*sqrt(5))/4 = (sqrt(15) + sqrt(3))/sqrt(2)
+cosQ2 = sqrt(7-3*sqrt(5))/4 = (sqrt( 9) - sqrt(5))/sqrt(2)
+
+The expressions reveal a nice symmetry, but Law of Sines can do even more
+sinQ2 = sqrt(6)/4 * phi
+sinS1 = sqrt(6)/4 / phi
+
 
 Area of small equilateral triangle is sqrt(3)/4
 
@@ -369,6 +421,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Check!
 
+Clearly, As is equal to Aq, since bases and heights are equal. Some expressions, from straightforward trig:
+
+q2*sin(Q3) = q3*sin(Q2)
+s2*sin(S3) = s3*sin(S2)
+
+phi*sqrt(3)/2
+
+
 Area of Inner Triangle wrt Outer
 
 Mathomatic version 16.0.5
@@ -394,6 +454,7 @@ Calculating...
 #4: answer = 7 - (3*(5^-))
                        2
 
+Also, sqrt(49) - sqrt(45)
 
 Summary:
 
@@ -407,7 +468,25 @@ therefore, S2=Q1
 
 S1+Q1 = Q2-S1 = 60
 
-sinS2=sinQ1=sqrt(3/8)=sqrt(6)/4
+sinS2 = sinQ1 = sqrt(3/8) = sqrt(6)/4
+cosS2 = cosQ1 = sqrt(5/8) = sqrt(10)/4
+
+sinS1 = sqrt(6)/4 / phi
+sinQ2 = sqrt(6)/4 * phi
+
+I found this blog entry. the equations are indirectly mentioned in the wikipedia articles I've been referencing, but without the final form and detailed discussion:
+
+https://divisbyzero.com/2010/10/28/trigonometric-functions-and-rational-multiples-of-pi/
+
+Actually.. it comes down to checking all possible rational numbers, a mess I tried earlier. Groan!
+
+Q1,
+S2: cos = sqrt(5/8)
+
+Q2: cos = sqrt(7-3*sqrt(5))/4
+
+S1: cos = sqrt(7+3*sqrt(5))/4
+
 
 
 s1,q1 = 1

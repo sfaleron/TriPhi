@@ -128,3 +128,57 @@ This is curious. It isn't surprising that r is very similar in both cases; it is
 What isn't surprising is the (co)tangent. This implies that the ratios of cross pairs should be equal. Also, the assignation of a,b,x,y to sin() or cos() is arbitrary, so whether a pairs up with x or y is not well defined.
 
 This may be a consequence of the ratios a/b and x/y being equal?
+
+
+suppose sqrt(3/8), sqrt(5/8) are "trigonometric numbers"
+https://en.wikipedia.org/wiki/Trigonometric_number
+
+then there is some a, b such that
+sqrt(3/8) = sin(a/b * pi)
+sqrt(5/8) = cos(a/b * pi)
+
+cosine works out to be better.
+
+also, there should be some n, k such that
+Re(exp(2*k*pi*i/n)) = cos(2*k*pi/n) = sqrt(5/8)
+
+Inverting the cosine on both sides,
+2*k*pi/n = arccos(sqrt(5/8)) = Q2 = S1
+
+sqrt(5/8) = cos(a/b * pi)
+sqrt(5/8) = cos(2*k*pi/n)
+
+a,b,n,k are all integers
+a has to be even, that helps
+
+a/b = 2*k/n = arccos(sqrt(5/8)) / pi
+
+sqrt(3/8) = sqrt(6)/4 = sqrt(2)/2 * sqrt(3)/2
+
+Given a vaule of sin/cos, find the other angle with that sin/cos in (0, 2*pi)
+sin(x) = sin(  pi-x)
+cos(x) = cos(2*pi-x)
+
+Given a sin/cos value, find the equivalent cos/sin
+sin(x) = cos(pi/2-x)
+cos(x) = sin(pi/2-x)
+
+Given a sin/cos value, find the angle that has the same sin/cos, but with inverted sign
+sin(x) = -sin(2*pi-x)
+cos(x) = -cos(  pi-x)
+
+
+sqrt(6)/4 = sqrt(2)/2 * sqrt(3)/2
+
+Each pair of angles is the application of the sin/cos:sin/cos relations
+Each pair of lines is the application of the sin/cos:cos/sin relations
+
+= sin( 45,135) * sin( 30,150)
+= cos( 45,315) * cos( 60,300)
+
+The first pair, with sin/cos:-sin/-cos applied
+
+= sin(315,225) * sin(330,210)
+= cos(135,225) * cos(120,240)
+
+or one from each side; negate if using one from each pair of equations

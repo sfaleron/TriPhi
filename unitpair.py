@@ -74,59 +74,38 @@ if __name__ == '__main__':
     # straight in my mental model seems to be a recurring SVG problem. Maybe
     # it's just an inkscape problem?
 
-    kw = {'font-family': 'sans-serif', 'font-size': Scale(.05)}
+    kwName = {'font-family': 'verdana', 'font-size': Scale(.053)}
 
-    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short', invert=True, dy=Scale(-.03), dx=Scale(-.05), **kw ))
-    stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',               dy=Scale(-.03), **kw ))
-    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',               dy=Scale(-.03), dx=Scale(.06), **kw ))
+    kwSym  = kwName.copy()
+    kwSym['font-style'] = 'oblique'
 
-    stk.add(LineLabel(pts.common, pts.slim,   'interior short',              dy=Scale(.08), **kw ))
-    stk.add(LineLabel(pts.common, pts.squat,  'interior short', invert=True, dy=Scale(.08), **kw ))
+    kwLrg  = kwSym.copy()
+    kwLrg['font-size'] = Scale(.15)
 
-    kw.update({'font-style': 'oblique'})
+    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short',    invert=True, dy=Scale(-.03), dx=Scale(-.05), **kwName ))
+    stk.add(LineLabel(pts.apex,   pts.squat,  'q3',                invert=True, dy=Scale( .06), dx=Scale(-.05), **kwSym  ))
 
-    stk.add(LineLabel(pts.apex,   pts.squat,  'q3', invert=True, dy=Scale(.06), dx=Scale(-.05), **kw ))
-    stk.add(LineLabel(pts.apex,   pts.slim,   's3',              dy=Scale(.06), **kw ))
+    stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',  dy=Scale(-.03), dx=Scale(-.2), **kwName ))
+    stk.add(LineLabel(pts.apex,   pts.slim,   's3',             dy=Scale( .06), dx=Scale(-.2), **kwSym  ))
 
-    stk.add(LineLabel(pts.apex,   pts.common, 'q2',              dy=Scale( .06), dx=Scale(.28), **kw ))
-    stk.add(LineLabel(pts.apex,   pts.common, 's2',              dy=Scale(-.03), dx=Scale(.28), **kw ))
+    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',  dy=Scale(-.03), dx=Scale(-.04), **kwName ))
+    stk.add(LineLabel(pts.apex,   pts.common, 'q2',             dy=Scale( .06), dx=Scale( .2), **kwSym  ))
+    stk.add(LineLabel(pts.apex,   pts.common, 's2',             dy=Scale(-.03), dx=Scale( .2), **kwSym  ))
 
-    stk.add(LineLabel(pts.common, pts.squat,  'q1', invert=True, dy=Scale(-.06), **kw ))
-    stk.add(LineLabel(pts.common, pts.slim,   's1',              dy=Scale(-.06), **kw ))
+    stk.add(LineLabel(pts.common, pts.slim,   'interior short',              dy=Scale( .08), **kwName ))
+    stk.add(LineLabel(pts.common, pts.squat,  'interior short', invert=True, dy=Scale( .08), **kwName ))
+    stk.add(LineLabel(pts.common, pts.squat,  'q1',             invert=True, dy=Scale(-.06), **kwSym  ))
+    stk.add(LineLabel(pts.common, pts.slim,   's1',                          dy=Scale(-.06), **kwSym  ))
 
-    kw.update({'font-size': Scale(.15), 'font-style': 'oblique'})
     uline = partial(TSpan, **{'text-decoration': 'underline'})
 
-    txt = stk.add(LineLabel(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.08), **kw ))
+    txt = stk.add(LineLabel(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.08), **kwLrg ))
     txt.add_many('S', uline('q'), 'uat')
 
-    txt = stk.add(LineLabel(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.27), **kw ))
+    txt = stk.add(LineLabel(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.27), **kwLrg ))
     txt.add_many(uline('S'), 'lim')
 
-    stk.push_layer('legend', True)
 
-    g = stk.push_group('angles')
-
-    with open(osp.join(osp.dirname(__file__), 'dev', 'angles.svg'), 'r') as f:
-        w = stk.add(Embed(f.read()))['width']
-
-    stk.pop()
-
-    impScl = Scale(7/12/float(w))
-    g.update(transform='scale({}) translate({},{})'.format(impScl, Scale(1.2), Scale(.06)))
-
-    g = stk.push_group('sides')
-
-    with open(osp.join(osp.dirname(__file__), 'dev', 'sides.svg'), 'r') as f:
-        stk.add(Embed(f.read()))
-
-    stk.pop()
-    stk.pop()
-
-    g.update(transform='translate({},{}) scale({})'.format(Scale(1.7), Scale(.06), impScl))
-
-
-    # labels might be nice to have, and possibly a little box off to the side
-    # with the side ratios and maybe also some angle values. Maybe area too.
+    # still looking for some angle labels
 
     print(stk)
