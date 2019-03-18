@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" height="352.0" width="484.0" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>
+Unit Pair
+</title>
+<polygon fill-opacity="0.7" style="" stroke-width="0px" fill="#acc8e4" points="242.0,325.6 64.0162612375,17.3231215423 22.0,325.6" />
+<polygon fill-opacity="0.7" style="" stroke-width="0px" fill="#5c84d0" points="242.0,325.6 64.0162612375,17.3231215423 462.0,325.6" />
+<polygon stroke="black" stroke-width="1.430000px" points="64.0162612375,17.3231215423 462.0,325.6 22.0,325.6" style="" fill-opacity="0" />
+<line y1="17.3231215423" stroke="black" stroke-width="1.430000px" fill-opacity="0" x2="242.0" x1="64.0162612375" y2="325.6" style="" />
+<path stroke="black" stroke-width="0.880000px" style="" d="M 352.0 317.35
+L 352.0 333.85" />
+<path stroke="black" stroke-width="0.880000px" style="" d="M 132.0 317.35
+L 132.0 333.85" />
+<path d="M 448.955604652 315.495854811
+A 16.5,16.5 0 0,0 445.5,325.6" stroke="black" stroke-width="0.880000px" style="" fill-opacity="0" />
+<path d="M 72.2662612375 31.6125407047
+A 16.5,16.5 0 0,1 61.7880124944,33.6719718853" stroke="black" stroke-width="0.880000px" style="" fill-opacity="0" />
+<path d="M 84.8872937946 33.4897538447
+A 26.4,26.4 0 0,1 60.4510632486,43.4812820912
+M 60.0054135 46.7510521598
+A 29.7,29.7 0 0,0 87.4961728643,35.5105828825" stroke="black" stroke-width="0.880000px" style="" fill-opacity="0" />
+<path d="M 233.75 311.310580838
+A 16.5,16.5 0 0,0 225.5,325.6
+M 222.2 325.6
+A 19.8,19.8 0 0,1 232.1,308.452697005" stroke="black" stroke-width="0.880000px" style="" fill-opacity="0" />
+<text font-size="11.66" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="32.0081306188" font-family="verdana">exterior short</text>
+<text font-size="11.66" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle" style="" y="184.661560771" x="32.0081306188" font-family="verdana" font-style="oblique">q3</text>
+<text font-size="11.66" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="219.008130619" font-family="verdana">exterior long</text>
+<text font-size="11.66" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle" style="" y="184.661560771" x="219.008130619" font-family="verdana" font-style="oblique">s3</text>
+<text font-size="11.66" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="144.208130619" font-family="verdana">interior long</text>
+<text font-size="11.66" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="184.661560771" x="197.008130619" font-family="verdana" font-style="oblique">q2</text>
+<text font-size="11.66" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="197.008130619" font-family="verdana" font-style="oblique">s2</text>
+<text font-size="11.66" style="" y="343.2" x="352.0" font-family="verdana" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle">interior short</text>
+<text font-size="11.66" style="" y="343.2" x="132.0" font-family="verdana" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">interior short</text>
+<text font-size="11.66" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle" style="" y="312.4" x="132.0" font-family="verdana" font-style="oblique">q1</text>
+<text font-size="11.66" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle" style="" y="312.4" x="352.0" font-family="verdana" font-style="oblique">s1</text>
+<text font-size="33.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle" style="" y="277.2" x="114.4" font-family="verdana" font-style="oblique">S<tspan text-decoration="underline">q</tspan>uat</text>
+<text font-size="33.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle" style="" y="277.2" x="292.6" font-family="verdana" font-style="oblique"><tspan text-decoration="underline">S</tspan>lim</text>
+</svg>
