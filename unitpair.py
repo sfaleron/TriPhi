@@ -74,7 +74,7 @@ if __name__ == '__main__':
     # straight in my mental model seems to be a recurring SVG problem. Maybe
     # it's just an inkscape problem?
 
-    kwName = {'font-family': 'verdana', 'font-size': Scale(.053)}
+    kwName = {'font-family': 'verdana', 'font-size': Scale(.05)}
 
     kwSym  = kwName.copy()
     kwSym['font-style'] = 'oblique'
@@ -82,15 +82,13 @@ if __name__ == '__main__':
     kwLrg  = kwSym.copy()
     kwLrg['font-size'] = Scale(.15)
 
-    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short',    invert=True, dy=Scale(-.03), dx=Scale(-.05), **kwName ))
-    stk.add(LineLabel(pts.apex,   pts.squat,  'q3',                invert=True, dy=Scale( .06), dx=Scale(-.05), **kwSym  ))
-
-    stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',  dy=Scale(-.03), dx=Scale(-.2), **kwName ))
-    stk.add(LineLabel(pts.apex,   pts.slim,   's3',             dy=Scale( .06), dx=Scale(-.2), **kwSym  ))
-
-    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',  dy=Scale(-.03), dx=Scale(-.04), **kwName ))
-    stk.add(LineLabel(pts.apex,   pts.common, 'q2',             dy=Scale( .06), dx=Scale( .2), **kwSym  ))
-    stk.add(LineLabel(pts.apex,   pts.common, 's2',             dy=Scale(-.03), dx=Scale( .2), **kwSym  ))
+    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short',    invert=True, dy=Scale(-.03), dx=Scale(0), **kwName ))
+    stk.add(LineLabel(pts.apex,   pts.squat,  'q3',                invert=True, dy=Scale( .06), dx=Scale(0), **kwSym  ))
+    stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',  dy=Scale(-.03), dx=Scale(-.23), **kwName ))
+    stk.add(LineLabel(pts.apex,   pts.slim,   's3',             dy=Scale( .06), dx=Scale(-.23), **kwSym  ))
+    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',  dy=Scale(-.03), dx=Scale(-.05), **kwName ))
+    stk.add(LineLabel(pts.apex,   pts.common, 'q2',             dy=Scale( .06), dx=Scale(.2), **kwSym  ))
+    stk.add(LineLabel(pts.apex,   pts.common, 's2',             dy=Scale(-.03), dx=Scale(.2), **kwSym  ))
 
     stk.add(LineLabel(pts.common, pts.slim,   'interior short',              dy=Scale( .08), **kwName ))
     stk.add(LineLabel(pts.common, pts.squat,  'interior short', invert=True, dy=Scale( .08), **kwName ))

@@ -22,8 +22,8 @@ In inkscape, turn off all tiles except a flipped pair, select all, resize page t
 Legend Layout is getting too tricky, and it keeps being tweaked. Make it a big block with the native layout side-by-side with the figure, rather than trying to fill in the void. Maybe make the void part of the native layout!
 
 Add a proportional displacement to the label; only applies to x direction.
-Maybe not proprtional exactly. Maybe an anchor, that defaults to center.
+Maybe not proportional exactly. Maybe an anchor, that defaults to center.
 
-Add angle labels, find the bisector and position the label according to a displacement provided.
+Add angle labels, find the bisector and position the label according to a displacement provided. LoC and inverse trig. Something like the angle sorting.
 
 Upload to Github!
