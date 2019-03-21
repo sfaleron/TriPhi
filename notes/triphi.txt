@@ -421,13 +421,14 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Check!
 
-Clearly, As is equal to Aq, since bases and heights are equal. Some expressions, from straightforward trig:
+Clearly, As is equal to Aq, since bases and heights are equal. Some expressions for height, and also the area of the full figure, from straightforward trig:
 
 q2*sin(Q3) = q3*sin(Q2)
 s2*sin(S3) = s3*sin(S2)
 
 phi*sqrt(3)/2
 
+Which is the height of an equilateral triangle with side length phi, which is rather more interesting than the other fact that it's the area of an equilateral triangle with side sqrt(2*phi).
 
 Area of Inner Triangle wrt Outer
 

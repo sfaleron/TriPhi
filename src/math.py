@@ -1,10 +1,14 @@
 
+# A couple of these functions expect Point arguments, and they won't work with
+# other sequences or iterators. This is fine, as their scope is limited to this
+# package.
+
 from  __future__ import division
 from  __future__ import absolute_import
 
-from        math import sin, cos, pi, atan2, sqrt
-
-from simplesvg.lib.math import Point, midpoint, between, dist, make_scaler
+from simplesvg.lib.math import (
+    Point, midpoint, between, sqrt, pi,
+    atan2, sin, cos, make_scaler, dist )
 
 
 # Construct a figure like that at http://www.cut-the-knot.org/do_you_know/Buratino7.shtml
@@ -33,6 +37,7 @@ def outer(sideLength, rotate=0):
     # side/sqrt(3), or half of the height of the triangle
     r = sideLength/sqrt(3)
 
+    ## ?? IVY ?? ##
     pts = [ Point(r*cos(a), r*sin(a)) for a in [
         (2./3*i+.5)*pi+rotate for i in range(3)] ]
 
@@ -41,7 +46,7 @@ def outer(sideLength, rotate=0):
     xmin = min(xs); xmax = max(xs)
     ymin = min(ys); ymax = max(ys)
 
-    # for an SVG canvas (inverted y)
+    ## IVY ##
     transform = lambda p: Point(p.x-xmin, ymax-p.y)
 
     return tuple(map(transform, pts))
@@ -145,7 +150,7 @@ def triangles_from_side(pt1, pt2, sideLength=None):
     return (make_ccw([pt1,pt2,pt3a], midPt), make_ccw([pt1,pt2,pt3b], midPt))
 
 
-# flip the y for SVG
+## ?? IVY ?? ##
 def make_ccw(pts, ctr):
     return tuple(zip(*sorted(
-        [(pt, atan2(ctr.y-pt.y, pt.x-ctr.x)) for pt in pts], key=lambda x:x[1]) ))[0]
+        [(pt, atan2(pt.y-ctr.y, pt.x-ctr.x)) for pt in pts], key=lambda x:x[1]) ))[0]

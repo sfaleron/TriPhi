@@ -27,3 +27,19 @@ Maybe not proportional exactly. Maybe an anchor, that defaults to center.
 Add angle labels, find the bisector and position the label according to a displacement provided. LoC and inverse trig. Something like the angle sorting.
 
 Upload to Github!
+
+Check out the results of atan2/5() in make_ccw(), and if it's sorting correctly
+
+
+I think I have a rabbit hole to vanish into.. The Plastic Number!
+
+I've been meaning to characterize the Special General Cases, what sort of interesting proportions lie in there? The Golden Ratio is only one among a continuum, and the Padovan Numbers also involve equilateral triangles. They are to the Plastic Ratio as Fibonacci Numbers are to the Golden Ratio. Or any sequence that is the sum of the last two elements. Reals, complex should work. Quaternions and Octonions, less sure. Seems like supporting addition/subtraction and multiplication/division should suffice?
+
+
+
+You can get them from Pascal's Triangle, too! I might have a new favorite constant. Eep!
+I'm guessing not. They are neat, but maybe not as broadly useful?
+
+The Golden Ratio and The Plastic Number have a unique connection. They are the only numbers s.t. for natural numbers k,l x+1=x^k and x-1=x^-l.
+
+Symbols are all over the place. The Numberphile video used capital psi, Wikipedia lowercase rho, and Mathworld a capital Latin "P".

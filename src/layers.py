@@ -1,15 +1,17 @@
 
-from __future__ import division
-from __future__ import absolute_import
+from  __future__ import division
+from  __future__ import absolute_import
 
-import  os.path     as osp
-from       math import sin, cos
+import  os.path      as osp
 
-from  simplesvg import Polygon, Text, Line, Path, filled_polygon
-from   .keyattr import KeywordToAttr, kw2aDec, AttribItem
-from   .options import standardSide
+from   simplesvg import Polygon, Text, Line, Path, filled_polygon
+from simplesvg.lib.math  import  sin,  cos
 
-from   registry import RegistryMap
+from    .keyattr import KeywordToAttr, kw2aDec, AttribItem
+from    .options import standardSide
+
+from    registry import RegistryMap
+
 
 
 def rotate_left(seq):
@@ -145,12 +147,13 @@ def _(stk, lbls, pts, size=None):
         path = stk.push_group('labels') )
 
 
+    ## ?? IVY ?? ##
     for k, lbl, pt in [(kk, lbls[kk], pts[kk]) for kk in lbls]:
 
         if lbl.r is None:
             dx, dy = lbl.dx, lbl.dy
         else:
-            dx, dy = lbl.r*size*cos(lbl.theta), -lbl.r*size*sin(lbl.theta)
+            dx, dy = lbl.r*size*cos(lbl.theta), lbl.r*size*sin(lbl.theta)
 
         stk.add(Text((pt.x+dx, pt.y+dy), k))
 
