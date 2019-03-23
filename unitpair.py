@@ -1,9 +1,12 @@
 
-from  __future__ import division
-from  __future__ import print_function
-from  __future__ import absolute_import
+from   __future__  import division
+from   __future__  import print_function
+from   __future__  import absolute_import
 
-from simplesvg     import SVGStack, SVG, filled_polygon, Line, Polygon, TSpan, Group
+from     simplesvg import (
+    SVGStack, Polygon, Group, Style,
+    filled_polygon, Line, SVG, TSpan )
+
 from simplesvg.lib import HatchDecorations, ArcDecorations, LineLabel, AngleLabel
 
 from src.options   import defaults
@@ -27,6 +30,7 @@ Scale = make_scaler(SCL)
 if __name__ == '__main__':
     Point_ = lambda a,b: SCL*Point(a+1.1, b+1.48)
 
+    ## ?? IVY ?? ##
     pts = Points(common=Point_(0,0), squat=Point_(-1,0), slim=Point_(1,0),
         apex=Point_(-(1+sqrt(5))/4, -(sqrt(15)+sqrt(3))/4) )
 
@@ -41,6 +45,9 @@ if __name__ == '__main__':
     # apex y-coordinate is -1.401, convenient!
     stk = SVGStack( SVG('Unit Pair',
         docFlags={'inkOffsetFix'}, width=Scale(2.2), height=Scale(1.6)) )
+
+    # relative to svg directory
+    stk.baseNode.add_styleSheet('../fonts/stylesheet.css')
 
     stk.add(filled_polygon((pts.common, pts.apex, pts.squat),
         defaults.colors.squat, **pgonAttrs))
@@ -78,56 +85,60 @@ if __name__ == '__main__':
 
     # The mathcha SVG is still yucky, though.
 
-    kwName = {'font-family': 'verdana', 'font-size': Scale(.05)}
+    nameStyle = Style(**{
+        'font-family': 'sinkinsans',
+        'font-style' : 'normal',
+        'font-size'  : Scale(.05)
+    })
 
-    kwSym  = kwName.copy()
-    kwSym['font-style'] = 'italic'
+    symStyle  = nameStyle.copy()
+    symStyle['font-style'] = 'italic'
 
-    kwLrg  = kwSym.copy()
-    kwLrg['font-size'] = Scale(.15)
+    lrgStyle  = symStyle.copy()
+    lrgStyle['font-size'] = Scale(.13)
 
-    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short',    invert=True, dy=Scale(-.03), dx=Scale(0), **kwName ))
-    stk.add(LineLabel(pts.apex,   pts.squat,  'q3',                invert=True, dy=Scale( .06), dx=Scale(0), **kwSym  ))
-    stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',  dy=Scale(-.03), dx=Scale(-.23), **kwName ))
-    stk.add(LineLabel(pts.apex,   pts.slim,   's3',             dy=Scale( .06), dx=Scale(-.23), **kwSym  ))
-    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',  dy=Scale(-.03), dx=Scale(-.05), **kwName ))
-    stk.add(LineLabel(pts.apex,   pts.common, 'q2',             dy=Scale( .06), dx=Scale(.2), **kwSym  ))
-    stk.add(LineLabel(pts.apex,   pts.common, 's2',             dy=Scale(-.03), dx=Scale(.2), **kwSym  ))
+    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short',    invert=True, dy=Scale(-.03), dx=Scale(0), style=nameStyle))
+    stk.add(LineLabel(pts.apex,   pts.squat,  'q3',                invert=True, dy=Scale( .07), dx=Scale(0), style=symStyle))
+    stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',  dy=Scale(-.03), dx=Scale(-.23), style=nameStyle))
+    stk.add(LineLabel(pts.apex,   pts.slim,   's3',             dy=Scale( .07), dx=Scale(-.23), style=symStyle))
+    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',  dy=Scale(-.03), dx=Scale(-.05), style=nameStyle))
+    stk.add(LineLabel(pts.apex,   pts.common, 'q2',             dy=Scale( .07), dx=Scale(  .2), style=symStyle))
+    stk.add(LineLabel(pts.apex,   pts.common, 's2',             dy=Scale(-.03), dx=Scale(  .2), style=symStyle))
 
-    stk.add(LineLabel(pts.common, pts.slim,   'interior short',              dy=Scale( .08), **kwName ))
-    stk.add(LineLabel(pts.common, pts.squat,  'interior short', invert=True, dy=Scale( .08), **kwName ))
-    stk.add(LineLabel(pts.common, pts.squat,  'q1',             invert=True, dy=Scale(-.06), **kwSym  ))
-    stk.add(LineLabel(pts.common, pts.slim,   's1',                          dy=Scale(-.06), **kwSym  ))
+    stk.add(LineLabel(pts.common, pts.slim,   'interior short',              dy=Scale( .08), style=nameStyle))
+    stk.add(LineLabel(pts.common, pts.squat,  'interior short', invert=True, dy=Scale( .08), style=nameStyle))
+    stk.add(LineLabel(pts.common, pts.squat,  'q1',             invert=True, dy=Scale(-.06), style=symStyle))
+    stk.add(LineLabel(pts.common, pts.slim,   's1',                          dy=Scale(-.06), style=symStyle))
 
-    stk.add( AngleLabel(pts.apex, pts.common, pts.squat,    Scale(.2), 'Q1', **kwName))
-    stk.add(AngleLabel(pts.squat, pts.common, pts.apex,          None, 'Q2', dx=Scale(.07), dy=Scale(-.03), **kwName))
+    stk.add( AngleLabel(pts.apex, pts.common, pts.squat,    Scale(.2), 'Q1', rotate=pi/75, style=symStyle))
+    stk.add(AngleLabel(pts.squat, pts.common, pts.apex,          None, 'Q2', dx=Scale(.07), dy=Scale(-.03), style=symStyle))
 
-    stk.add(AngleLabel(pts.apex, pts.common,  pts.slim, Scale(.24), 'S1', rotate=pi/100, **kwName))
+    stk.add(AngleLabel(pts.apex, pts.common,  pts.slim, Scale(.24), 'S1', rotate=pi/45, style=symStyle))
+
+
+    kw = {'show': False}
 
     if SANEIVY:
-        stk.add(AngleLabel(pts.common, pts.apex, pts.squat,    Scale(.1), 'Q3', rotate=0, **kwName))
+        stk.add(AngleLabel(pts.common, pts.apex, pts.squat,    Scale(.1), 'Q3', rotate=0, style=symStyle, **kw))
     else:
-        stk.add(AngleLabel(pts.common, pts.apex, pts.squat, Scale(-.135), 'Q3', rotate=-pi/18, **kwName))
+        stk.add(AngleLabel(pts.common, pts.apex, pts.squat, Scale(-.135), 'Q3', rotate=-pi/18, style=symStyle, **kw))
 
     if SANEIVY:
-        kwName['show'] = True
-        stk.add(AngleLabel( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', rotate=0, **kwName))
+        kw['show'] = True
+        stk.add(AngleLabel( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', rotate=0, style=symStyle, **kw))
     else:
-        stk.add(AngleLabel( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', dx=Scale(-.16), dy=Scale(-.03), **kwName))
+        stk.add(AngleLabel( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', dx=Scale(-.16), dy=Scale(-.03), style=symStyle, **kw))
 
-    kwName['show'] = False
-    stk.add(AngleLabel(pts.common, pts.apex,  pts.slim,       None, 'S3', dx=Scale( .04), dy=Scale(-.03), **kwName))
+    kw['show'] = False
+    stk.add(AngleLabel(pts.common, pts.apex,  pts.slim,       None, 'S3', dx=Scale( .04), dy=Scale(-.03), style=symStyle, **kw))
 
 
     uline = partial(TSpan, **{'text-decoration': 'underline'})
 
-    txt = stk.add(LineLabel(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.08), **kwLrg ))
+    txt = stk.add(LineLabel(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.08), style=lrgStyle ))
     txt.add_many('S', uline('q'), 'uat')
 
-    txt = stk.add(LineLabel(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.27), **kwLrg ))
+    txt = stk.add(LineLabel(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.27), style=lrgStyle))
     txt.add_many(uline('S'), 'lim')
-
-
-    # still looking for some angle labels
 
     print(stk)

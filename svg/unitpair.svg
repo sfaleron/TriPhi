@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="../fonts/stylesheet.css" type="text/css" ?>
 <svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" style="" xmlns="http://www.w3.org/2000/svg" height="352.0" width="484.0" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>
 Unit Pair
@@ -23,23 +24,23 @@ A 29.7,29.7 0 0,0 87.4961728643,35.5105828825" stroke="black" stroke-width="0.88
 A 16.5,16.5 0 0,0 225.5,325.6
 M 222.2 325.6
 A 19.8,19.8 0 0,1 232.1,308.452697005" stroke="black" stroke-width="0.880000px" style="" fill-opacity="0" />
-<text font-size="11.0" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="43.0081306188" font-family="verdana">exterior short</text>
-<text font-size="11.0" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle" style="" y="184.661560771" x="43.0081306188" font-family="verdana" font-style="italic">q3</text>
-<text font-size="11.0" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="212.408130619" font-family="verdana">exterior long</text>
-<text font-size="11.0" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle" style="" y="184.661560771" x="212.408130619" font-family="verdana" font-style="italic">s3</text>
-<text font-size="11.0" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="142.008130619" font-family="verdana">interior long</text>
-<text font-size="11.0" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="184.661560771" x="197.008130619" font-family="verdana" font-style="italic">q2</text>
-<text font-size="11.0" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="197.008130619" font-family="verdana" font-style="italic">s2</text>
-<text font-size="11.0" style="" y="343.2" x="352.0" font-family="verdana" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle">interior short</text>
-<text font-size="11.0" style="" y="343.2" x="132.0" font-family="verdana" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">interior short</text>
-<text font-size="11.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle" style="" y="312.4" x="132.0" font-family="verdana" font-style="italic">q1</text>
-<text font-size="11.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle" style="" y="312.4" x="352.0" font-family="verdana" font-style="italic">s1</text>
-<text font-size="11.0" style="" text-anchor="middle" y="60.497131317" x="72.5018301624" font-family="verdana">Q1</text>
-<text font-size="11.0" style="" text-anchor="middle" y="319.0" x="37.4" font-family="verdana">Q2</text>
-<text font-size="11.0" style="" text-anchor="middle" y="58.170571664" x="97.4725882707" font-family="verdana">S1</text>
-<text font-size="11.0" style="" text-anchor="middle" y="315.442001743" x="214.091129163" font-family="verdana">Q3</text>
-<text font-size="11.0" style="" text-anchor="middle" y="319.0" x="426.8" font-family="verdana">S2</text>
-<text font-size="11.0" style="" text-anchor="middle" y="319.0" x="250.8" font-family="verdana">S3</text>
-<text font-size="33.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle" style="" y="277.2" x="114.4" font-family="verdana" font-style="italic">S<tspan text-decoration="underline">q</tspan>uat</text>
-<text font-size="33.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle" style="" y="277.2" x="292.6" font-family="verdana" font-style="italic"><tspan text-decoration="underline">S</tspan>lim</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="164.861560771" x="43.0081306188" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle">exterior short</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="186.861560771" x="43.0081306188" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle">q3</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="164.861560771" x="212.408130619" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle">exterior long</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="186.861560771" x="212.408130619" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle">s3</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="164.861560771" x="142.008130619" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle">interior long</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="186.861560771" x="197.008130619" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle">q2</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="164.861560771" x="197.008130619" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle">s2</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="343.2" x="352.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle">interior short</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="343.2" x="132.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">interior short</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="312.4" x="132.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">q1</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="312.4" x="352.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle">s1</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="60.8145991211" x="70.6864469933" text-anchor="middle">Q1</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="319.0" x="37.4" text-anchor="middle">Q2</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="59.4247787738" x="95.8798840441" text-anchor="middle">S1</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="315.442001743" x="214.091129163" text-anchor="middle">Q3</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="319.0" x="426.8" text-anchor="middle">S2</text>
+<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="319.0" x="250.8" text-anchor="middle">S3</text>
+<text style="font-size:28.6;font-family:sinkinsans;font-style:italic" y="277.2" x="114.4" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">S<tspan text-decoration="underline">q</tspan>uat</text>
+<text style="font-size:28.6;font-family:sinkinsans;font-style:italic" y="277.2" x="292.6" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle"><tspan text-decoration="underline">S</tspan>lim</text>
 </svg>
