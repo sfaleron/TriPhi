@@ -85,60 +85,51 @@ if __name__ == '__main__':
 
     # The mathcha SVG is still yucky, though.
 
-    nameStyle = Style(**{
-        'font-family': 'sinkinsans',
-        'font-style' : 'normal',
-        'font-size'  : Scale(.05)
-    })
+    Desc  = partial( LineLabel, **{'class': 'desc', 'font-size': Scale(.05)})
+    NameL = partial( LineLabel, **{'class': 'name', 'font-size': Scale(.05)})
+    Large = partial( LineLabel, **{'class': 'name', 'font-size': Scale(.13)})
 
-    symStyle  = nameStyle.copy()
-    symStyle['font-style'] = 'italic'
+    NameA = partial(AngleLabel,            **{'class': 'name', 'font-size': Scale(.05)})
+    ShowA = partial(AngleLabel, show=True, **{'class': 'name', 'font-size': Scale(.05)})
 
-    lrgStyle  = symStyle.copy()
-    lrgStyle['font-size'] = Scale(.13)
+    stk.add( Desc(pts.apex,   pts.squat,  'exterior short',    invert=True, dy=Scale(-.03), dx=Scale(0) ))
+    stk.add(NameL(pts.apex,   pts.squat,  'q3',                invert=True, dy=Scale( .07), dx=Scale(0) ))
+    stk.add( Desc(pts.apex,   pts.slim,   'exterior long',  dy=Scale(-.03), dx=Scale(-.23) ))
+    stk.add(NameL(pts.apex,   pts.slim,   's3',             dy=Scale( .07), dx=Scale(-.23) ))
+    stk.add( Desc(pts.apex,   pts.common, 'interior long',  dy=Scale(-.03), dx=Scale(-.05) ))
+    stk.add(NameL(pts.apex,   pts.common, 'q2',             dy=Scale( .07), dx=Scale(  .2) ))
+    stk.add(NameL(pts.apex,   pts.common, 's2',             dy=Scale(-.03), dx=Scale(  .2) ))
 
-    stk.add(LineLabel(pts.apex,   pts.squat,  'exterior short',    invert=True, dy=Scale(-.03), dx=Scale(0), style=nameStyle))
-    stk.add(LineLabel(pts.apex,   pts.squat,  'q3',                invert=True, dy=Scale( .07), dx=Scale(0), style=symStyle))
-    stk.add(LineLabel(pts.apex,   pts.slim,   'exterior long',  dy=Scale(-.03), dx=Scale(-.23), style=nameStyle))
-    stk.add(LineLabel(pts.apex,   pts.slim,   's3',             dy=Scale( .07), dx=Scale(-.23), style=symStyle))
-    stk.add(LineLabel(pts.apex,   pts.common, 'interior long',  dy=Scale(-.03), dx=Scale(-.05), style=nameStyle))
-    stk.add(LineLabel(pts.apex,   pts.common, 'q2',             dy=Scale( .07), dx=Scale(  .2), style=symStyle))
-    stk.add(LineLabel(pts.apex,   pts.common, 's2',             dy=Scale(-.03), dx=Scale(  .2), style=symStyle))
+    stk.add( Desc(pts.common, pts.slim,   'interior short',              dy=Scale( .08) ))
+    stk.add( Desc(pts.common, pts.squat,  'interior short', invert=True, dy=Scale( .08) ))
+    stk.add(NameL(pts.common, pts.squat,  'q1',             invert=True, dy=Scale(-.06) ))
+    stk.add(NameL(pts.common, pts.slim,   's1',                          dy=Scale(-.06) ))
 
-    stk.add(LineLabel(pts.common, pts.slim,   'interior short',              dy=Scale( .08), style=nameStyle))
-    stk.add(LineLabel(pts.common, pts.squat,  'interior short', invert=True, dy=Scale( .08), style=nameStyle))
-    stk.add(LineLabel(pts.common, pts.squat,  'q1',             invert=True, dy=Scale(-.06), style=symStyle))
-    stk.add(LineLabel(pts.common, pts.slim,   's1',                          dy=Scale(-.06), style=symStyle))
+    stk.add( NameA(pts.apex, pts.common, pts.squat,    Scale(.2), 'Q1', rotate=pi/75))
+    stk.add(NameA(pts.squat, pts.common, pts.apex,          None, 'Q2', dx=Scale(.07), dy=Scale(-.03) ))
 
-    stk.add( AngleLabel(pts.apex, pts.common, pts.squat,    Scale(.2), 'Q1', rotate=pi/75, style=symStyle))
-    stk.add(AngleLabel(pts.squat, pts.common, pts.apex,          None, 'Q2', dx=Scale(.07), dy=Scale(-.03), style=symStyle))
+    stk.add(NameA(pts.apex, pts.common,  pts.slim, Scale(.24), 'S1', rotate=pi/45))
 
-    stk.add(AngleLabel(pts.apex, pts.common,  pts.slim, Scale(.24), 'S1', rotate=pi/45, style=symStyle))
-
-
-    kw = {'show': False}
 
     if SANEIVY:
-        stk.add(AngleLabel(pts.common, pts.apex, pts.squat,    Scale(.1), 'Q3', rotate=0, style=symStyle, **kw))
+        stk.add(ShowA(pts.common, pts.apex, pts.squat,    Scale(.1), 'Q3', rotate=0))
     else:
-        stk.add(AngleLabel(pts.common, pts.apex, pts.squat, Scale(-.135), 'Q3', rotate=-pi/18, style=symStyle, **kw))
+        stk.add(NameA(pts.common, pts.apex, pts.squat, Scale(-.135), 'Q3', rotate=-pi/18))
 
     if SANEIVY:
-        kw['show'] = True
-        stk.add(AngleLabel( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', rotate=0, style=symStyle, **kw))
+        stk.add(ShowA( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', rotate=0 ))
     else:
-        stk.add(AngleLabel( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', dx=Scale(-.16), dy=Scale(-.03), style=symStyle, **kw))
+        stk.add(NameA( pts.slim, pts.common, pts.apex, Scale(.05), 'S2', dx=Scale(-.16), dy=Scale(-.03) ))
 
-    kw['show'] = False
-    stk.add(AngleLabel(pts.common, pts.apex,  pts.slim,       None, 'S3', dx=Scale( .04), dy=Scale(-.03), style=symStyle, **kw))
+    stk.add(NameA(pts.common, pts.apex,  pts.slim,       None, 'S3', dx=Scale( .04), dy=Scale(-.03) ))
 
 
     uline = partial(TSpan, **{'text-decoration': 'underline'})
 
-    txt = stk.add(LineLabel(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.08), style=lrgStyle ))
+    txt = stk.add(Large(pts.common, pts.squat, invert=True, dy=Scale(-.22), dx=Scale(-.08) ))
     txt.add_many('S', uline('q'), 'uat')
 
-    txt = stk.add(LineLabel(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.27), style=lrgStyle))
+    txt = stk.add(Large(pts.common, pts.slim,               dy=Scale(-.22), dx=Scale(-.27) ))
     txt.add_many(uline('S'), 'lim')
 
     print(stk)

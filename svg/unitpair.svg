@@ -24,23 +24,23 @@ A 29.7,29.7 0 0,0 87.4961728643,35.5105828825" stroke="black" stroke-width="0.88
 A 16.5,16.5 0 0,0 225.5,325.6
 M 222.2 325.6
 A 19.8,19.8 0 0,1 232.1,308.452697005" stroke="black" stroke-width="0.880000px" style="" fill-opacity="0" />
-<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="164.861560771" x="43.0081306188" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle">exterior short</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="186.861560771" x="43.0081306188" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle">q3</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="164.861560771" x="212.408130619" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle">exterior long</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="186.861560771" x="212.408130619" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle">s3</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="164.861560771" x="142.008130619" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle">interior long</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="186.861560771" x="197.008130619" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle">q2</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="164.861560771" x="197.008130619" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle">s2</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="343.2" x="352.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle">interior short</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:normal" y="343.2" x="132.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">interior short</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="312.4" x="132.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">q1</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="312.4" x="352.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle">s1</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="60.8145991211" x="70.6864469933" text-anchor="middle">Q1</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="319.0" x="37.4" text-anchor="middle">Q2</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="59.4247787738" x="95.8798840441" text-anchor="middle">S1</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="315.442001743" x="214.091129163" text-anchor="middle">Q3</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="319.0" x="426.8" text-anchor="middle">S2</text>
-<text style="font-size:11.0;font-family:sinkinsans;font-style:italic" y="319.0" x="250.8" text-anchor="middle">S3</text>
-<text style="font-size:28.6;font-family:sinkinsans;font-style:italic" y="277.2" x="114.4" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle">S<tspan text-decoration="underline">q</tspan>uat</text>
-<text style="font-size:28.6;font-family:sinkinsans;font-style:italic" y="277.2" x="292.6" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle"><tspan text-decoration="underline">S</tspan>lim</text>
+<text font-size="11.0" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="43.0081306188" class="desc">exterior short</text>
+<text font-size="11.0" transform="rotate(-82.238756 43.0081306188,171.461560771)" text-anchor="middle" style="" y="186.861560771" x="43.0081306188" class="name">q3</text>
+<text font-size="11.0" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="212.408130619" class="desc">exterior long</text>
+<text font-size="11.0" transform="rotate(37.761244 263.008130619,171.461560771)" text-anchor="middle" style="" y="186.861560771" x="212.408130619" class="name">s3</text>
+<text font-size="11.0" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="142.008130619" class="desc">interior long</text>
+<text font-size="11.0" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="186.861560771" x="197.008130619" class="name">q2</text>
+<text font-size="11.0" transform="rotate(60.000000 153.008130619,171.461560771)" text-anchor="middle" style="" y="164.861560771" x="197.008130619" class="name">s2</text>
+<text font-size="11.0" style="" y="343.2" x="352.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle" class="desc">interior short</text>
+<text font-size="11.0" style="" y="343.2" x="132.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle" class="desc">interior short</text>
+<text font-size="11.0" style="" y="312.4" x="132.0" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle" class="name">q1</text>
+<text font-size="11.0" style="" y="312.4" x="352.0" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle" class="name">s1</text>
+<text font-size="11.0" style="" text-anchor="middle" y="60.8145991211" x="70.6864469933" class="name">Q1</text>
+<text font-size="11.0" style="" text-anchor="middle" y="319.0" x="37.4" class="name">Q2</text>
+<text font-size="11.0" style="" text-anchor="middle" y="59.4247787738" x="95.8798840441" class="name">S1</text>
+<text font-size="11.0" style="" text-anchor="middle" y="315.442001743" x="214.091129163" class="name">Q3</text>
+<text font-size="11.0" style="" text-anchor="middle" y="319.0" x="426.8" class="name">S2</text>
+<text font-size="11.0" style="" text-anchor="middle" y="319.0" x="250.8" class="name">S3</text>
+<text font-size="28.6" transform="rotate(0.000000 132.0,325.6)" text-anchor="middle" style="" y="277.2" x="114.4" class="name">S<tspan text-decoration="underline">q</tspan>uat</text>
+<text font-size="28.6" transform="rotate(0.000000 352.0,325.6)" text-anchor="middle" style="" y="277.2" x="292.6" class="name"><tspan text-decoration="underline">S</tspan>lim</text>
 </svg>
