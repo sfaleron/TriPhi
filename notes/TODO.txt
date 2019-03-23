@@ -1,6 +1,4 @@
 
-try to get rid of adb dependency, or make adb presentable
-
 triphi.txt has some redundancy. checks are good, but I think it goes beyond that. Better formatting would be nice somehow. Maybe jupityr notebooks? yacas supports jupityr, mathcha.io is pleasant for presenting results or generating SVG.
 
 Glyph is good for no rotation/flip. That's probably fine, but some thoughts..
