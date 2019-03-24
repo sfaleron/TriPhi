@@ -1,7 +1,7 @@
 
 Creates the TriPhi figure used as my `avatar`_, and `explores`_ the underlying `math`_.
 
-The inspiration came from an `page`_ at the "Interactive Mathematics Miscellany and Puzzles" `website`_.
+The inspiration came from a `page`_ at the "Interactive Mathematics Miscellany and Puzzles" `website`_.
 
 Uses the `SimpleSVG`_ library. Also depends on `six`_ and a couple of personal libraries I hope to have on GitHub and PyPI soon.
 
