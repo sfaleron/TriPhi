@@ -186,6 +186,10 @@ b = sqrt(2*q / (q^2-q+1) + 1)
 
 That's a full description of all the triangle sides, the angles are straightforward to churn out, but do any have neat, tidy expressions?
 
+Consider: take any triangle, scaling such that a side equals two, centering that side on the x-axis, amd drawing a median to the opposite vertex. Now repeat for the other two sides. What's the relationship among the sides?
+
+What patterns would appear in a plot of all the apices?
+
 
 Right Pair
 ----------
