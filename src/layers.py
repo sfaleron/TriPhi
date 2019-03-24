@@ -1,16 +1,16 @@
 
-from  __future__ import division
-from  __future__ import absolute_import
+from  __future__  import division
+from  __future__  import absolute_import
 
-import  os.path      as osp
+import    os.path as osp
 
-from   simplesvg import Polygon, Text, Line, Path, filled_polygon
-from simplesvg.lib.math  import  sin,  cos
+from simplesvg    import Polygon, Text, Line, Path, filled_polygon
+from simplesvg.lib.math import  sin,  cos
 
-from    .keyattr import KeywordToAttr, kw2aDec, AttribItem
-from    .options import standardSide
+from    .keyattr  import KeywordToAttr, kw2aDec, AttribItem
+from    .options  import standardSide
 
-from    registry import RegistryMap
+from registrycont import RegistryMap
 
 
 
