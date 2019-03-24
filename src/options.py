@@ -110,7 +110,7 @@ def _make_options():
     return opts
 
 
-standardSide = 480
+standardSide = 360
 
 # ====================================================
 # | You were expections some options? Here they are! |

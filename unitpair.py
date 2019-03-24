@@ -17,7 +17,7 @@ from functools     import partial
 
 import os.path     as osp
 
-SCL = 220
+SCL = 200
 
 SANEIVY = False
 
