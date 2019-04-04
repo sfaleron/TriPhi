@@ -39,7 +39,7 @@ def outer(sideLength, rotate=0):
 
     ## ?? IVY ?? ##
     pts = [ Point(r*cos(a), r*sin(a)) for a in [
-        (2./3*i+.5)*pi+rotate for i in range(3)] ]
+        (2/3*i+.5)*pi+rotate for i in range(3)] ]
 
     xs, ys = zip(*pts)
 
