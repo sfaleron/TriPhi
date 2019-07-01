@@ -182,6 +182,95 @@ Wolfram Alpha simplified
 There's a curious form of "2" involved here that I could figure out; maybe later.
 
 b = sqrt(2*q / (q^2-q+1) + 1)
+  = sqrt((3+sqrt(5))/2) = phi
+
+Fully parameterized, general case:
+x^2+y^2=2*(a^2+b^2)
+replace x with q*y
+replace q with p/(1-p)
+replace y with yy^.5
+solve for yy
+simplify
+
+
+1-> x^2+y^2=2*(a^2+b^2)
+
+#1: x^2 + y^2 = 2*(a^2 + b^2)
+
+1-> replace x with q*y
+
+#1: ((q*y)^2) + y^2 = 2*(a^2 + b^2)
+
+1-> replace q with p/(1-p)
+
+       p*y
+#1: (-------^2) + y^2 = 2*(a^2 + b^2)
+     (1 - p)
+
+1-> replace y with yy^.5
+
+           1
+     p*(yy^-)
+           2
+#1: (--------^2) + yy = 2*(a^2 + b^2)
+     (1 - p)
+
+1-> solve for yy
+Solve successful:
+
+           2*(a^2 + b^2)
+#1: yy = -----------------
+              p
+         ((-------^2) + 1)
+           (1 - p)
+
+1-> simplify
+
+         2*((p - 1)^2)*(a^2 + b^2)
+#1: yy = -------------------------
+            ((2*(p^2 - p)) + 1)
+
+
+Special Case duality yy/bb=2:
+replace yy with 2*b^2
+replace a with aa^.5
+replace b with bb^.5
+solve for aa
+simplify
+solve for bb
+simplify
+
+
+                p
+#1: aa = bb*(-------^2)
+             (p - 1)
+
+                  1
+#1: bb = aa*((1 - -)^2)
+                  p
+
+Note that p/(p-1) equals -q, so aa = bb*qq, pretty tidy!
+
+Special Case duality yy/aa=2:
+replace yy with 2*a^2
+replace a with aa^.5
+replace b with bb^.5
+solve for aa
+simplify
+solve for bb
+simplify
+
+                  1
+#1: aa = bb*((1 - -)^2)
+                  p
+
+                p
+#1: bb = aa*(-------^2)
+             (p - 1)
+
+Predictable enough!
+
+Written in terms of the ratios of a,b we get the dualities as multiplicative inverses of each other. Alternatively, one could exchange-substitute a and b with one another!
 
 
 That's a full description of all the triangle sides, the angles are straightforward to churn out, but do any have neat, tidy expressions?
