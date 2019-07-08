@@ -1,11 +1,11 @@
 
 # Python2 is chosen for its more compact default representation of floats
 
-INKSC = env inkscape
-PY    = env python2
+INKSC = /usr/bin/env inkscape
+PY    = /usr/bin/env python2
 
 BASE  = ../src/math.py  ../src/keyattr.py ../src/options.py
-FIGR  =   ../figure.py ../src/__init__.py  ../src/layers.py ../src/phiglyph.svg $(BASE)
+FIGR  =   ../figure.py ../src/__init__.py  ../src/layers.py ../lib/phiglyph.svg $(BASE)
 UNIT  = ../unitpair.py $(BASE)
 
 all:  *.svg *.png

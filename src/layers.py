@@ -130,8 +130,8 @@ import xml.etree.ElementTree as ET
 @layerReg('glyph')
 @layer
 def _(stk, side, center):
-    attribs = ET.parse(osp.join(osp.dirname(
-        __file__), 'phiglyph.svg')).getroot().attrib
+    attribs = ET.parse(osp.join(osp.dirname(__file__),
+        '..', 'lib', 'phiglyph.svg')).getroot().attrib
 
     attribs.update(transform='translate({:f} {:f}) scale({:f})'.format(
         center.x, center.y, side/standardSide))
