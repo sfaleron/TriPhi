@@ -5,41 +5,45 @@
 
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
   <mtable frame="solid" columnlines="solid"><mtr>
+    <!-- sides column -->
     <mtd>
 
-<mtable><mtr><mtd>
-
+<mtable><mtr>
+  <mtd>
       <menclose notation="bottom">
         <mstyle mathvariant="sans-serif">
           <mtext>Sides</mtext>
         </mstyle>
       </menclose>
-</mtd><mtd>
+</mtd>
+<mtd>
 
       <mtable width="100%" columnspacing="0em 2em" columnalign="right left"><mtr><mtd><mrow><mi>q</mi><mn>1</mn><mo form="infix">=</mo><mi>s</mi><mn>1</mn></mrow></mtd><mtd><mrow><mo form="infix">=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mi>q</mi><mn>2</mn><mo form="infix">=</mo><mi>s</mi><mn>2</mn></mrow></mtd><mtd><mrow><mo form="infix">=</mo><mi>&phi;</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>q</mi><mn>3</mn></mrow></mtd><mtd><mrow><mo form="infix">=</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mi>s</mi><mn>3</mn></mrow></mtd><mtd><mrow><mo form="infix">=</mo><msqrt><mn>2</mn></msqrt><mo form="infix">&#xB7;</mo><mi>&phi;</mi></mrow></mtd></mtr></mtable>
-</mtd><mtd>
+</mtd>
+<mtd>
 
       <menclose notation="bottom">
         <mstyle mathvariant="sans-serif">
           <mtext>Side Ratios</mtext>
         </mstyle>
       </menclose>
-</mtd><mtd>
+</mtd>
+<mtd>
 
       <mfrac><mrow><mi>s</mi><mn>3</mn></mrow><mrow><mi>q</mi><mn>3</mn></mrow></mfrac><mo form="infix">=</mo><mfrac><mrow><mi>q</mi><mn>2</mn></mrow><mrow><mi>q</mi><mn>1</mn></mrow></mfrac><mo form="infix">=</mo><mfrac><mrow><mi>s</mi><mn>2</mn></mrow><mrow><mi>s</mi><mn>1</mn></mrow></mfrac><mo form="infix">=</mo><mi>&phi;</mi>
-</mtd><mtd>
-
+</mtd>
+<mtd>
       <menclose notation="bottom">
         <mstyle mathvariant="sans-serif">
           <mtext>Height</mtext>
         </mstyle>
       </menclose>
-</mtd><mtd>
-
+</mtd>
+<mtd>
       <mi>h</mi><mo form="infix">=</mo><mfrac><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac><mo form="infix">&#xB7;</mo><mi>&phi;</mi>
     </mtd>
 
-</mtd></mtr></mtable>
+</mtr></mtable></mtd>
 
     <!-- angles column-->
     <mtd>
