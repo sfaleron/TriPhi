@@ -1,4 +1,4 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="270.426ex" height="36.176ex" style="vertical-align: -17.505ex;" viewBox="0 -8039 116433.1 15575.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="204.062ex" height="34.843ex" style="vertical-align: -16.838ex;" viewBox="0 -7752 87859.7 15001.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">Equation</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJSS-53" d="M55 514Q55 589 115 652T283 716Q315 716 345 711T396 699T432 685T457 672T467 667Q467 666 459 618T449 568Q383 634 282 634Q214 634 182 600T150 525Q150 507 155 492T172 465T194 446T222 432T247 423T272 416T289 412Q353 396 378 384Q432 358 466 307T500 194Q500 110 438 44T272 -22Q215 -22 159 -5T73 28T44 50Q45 51 49 75T57 122T62 146L65 143Q68 140 74 136T88 125T107 111T131 98T160 85T194 74T232 66T274 63H286Q327 63 366 96T406 182Q406 245 352 280Q329 296 265 310T173 339Q124 363 90 409T55 514Z"></path>
@@ -40,9 +40,10 @@
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
 <g transform="translate(167,0)">
 <g transform="translate(389,0)">
-<g transform="translate(0,4699)">
+<g transform="translate(-200,0)">
 <g transform="translate(167,0)">
 <g transform="translate(-11,0)">
+<g transform="translate(20176,6640)">
 <g transform="translate(275,0)">
  <use xlink:href="#E1-MJSS-53"></use>
  <use xlink:href="#E1-MJSS-69" x="556" y="0"></use>
@@ -52,7 +53,7 @@
 </g>
 <line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="2654" transform="translate(0,-298)"></line>
 </g>
-<g transform="translate(3481,0)">
+<g transform="translate(0,2897)">
 <g transform="translate(-11,0)">
 <g transform="translate(15695,2215)">
  <use xlink:href="#E1-MJMATHI-71" x="0" y="0"></use>
@@ -106,7 +107,7 @@
 </g>
 </g>
 </g>
-<g transform="translate(47325,0)">
+<g transform="translate(18936,-849)">
 <g transform="translate(275,0)">
  <use xlink:href="#E1-MJSS-53"></use>
  <use xlink:href="#E1-MJSS-69" x="556" y="0"></use>
@@ -121,7 +122,7 @@
 </g>
 <line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="5133" transform="translate(0,-298)"></line>
 </g>
-<g transform="translate(53296,0)">
+<g transform="translate(17461,-2632)">
 <g transform="translate(120,0)">
 <rect stroke="none" width="805" height="60" x="0" y="220"></rect>
 <g transform="translate(60,460)">
@@ -164,7 +165,7 @@
  <use xlink:href="#E1-MJMAIN-3D" x="6354" y="0"></use>
  <use xlink:href="#E1-MJMATHI-3C6" x="7466" y="0"></use>
 </g>
-<g transform="translate(62217,0)">
+<g transform="translate(19861,-4416)">
 <g transform="translate(275,0)">
  <use xlink:href="#E1-MJSS-48"></use>
  <use xlink:href="#E1-MJSS-65" x="708" y="0"></use>
@@ -175,7 +176,7 @@
 </g>
 <line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="3284" transform="translate(0,-482)"></line>
 </g>
-<g transform="translate(66339,0)">
+<g transform="translate(19126,-6524)">
  <use xlink:href="#E1-MJMATHI-68" x="0" y="0"></use>
  <use xlink:href="#E1-MJMAIN-3D" x="909" y="0"></use>
 <g transform="translate(2021,0)">
@@ -195,9 +196,13 @@
 </g>
 </g>
 </g>
-<line stroke-linecap="square" stroke-width="20.9" y1="10" x2="10" x1="10" y2="15348" transform="translate(72254,-7430)"></line>
-<g transform="translate(72654,0)">
-<g transform="translate(0,4699)">
+</g>
+<line stroke-linecap="square" stroke-width="20.9" y1="10" x2="10" x1="10" y2="14801" transform="translate(43757,-7156)"></line>
+<g transform="translate(44157,0)">
+<g transform="translate(-200,0)">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(19870,5806)">
 <g transform="translate(275,0)">
  <use xlink:href="#E1-MJSS-41"></use>
  <use xlink:href="#E1-MJSS-6E" x="667" y="0"></use>
@@ -207,7 +212,8 @@
  <use xlink:href="#E1-MJSS-73" x="2369" y="0"></use>
 </g>
 <line stroke-linecap="square" stroke-width="75" y2="37" y1="37" x1="37" x2="3265" transform="translate(0,-482)"></line>
-<g transform="translate(0,-3094)">
+</g>
+<g transform="translate(0,2713)">
 <g transform="translate(-11,0)">
 <g transform="translate(22963,1380)">
  <use xlink:href="#E1-MJMATHI-53" x="0" y="0"></use>
@@ -250,9 +256,9 @@
 </g>
 </g>
 </g>
-<g transform="translate(0,-6721)">
+<g transform="translate(0,-3003)">
 <g transform="translate(-11,0)">
-<g transform="translate(15943,0)">
+<g transform="translate(15943,2088)">
 <g transform="translate(167,0)">
 <g transform="translate(-11,0)">
 <g transform="translate(0,716)">
@@ -276,8 +282,27 @@
 </g>
 </g>
 </g>
+<g transform="translate(16047,-555)">
+ <use xlink:href="#E1-MJMATHI-73" x="0" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-69" x="469" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-6E" x="815" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-28" x="1415" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-51" x="1805" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-32" x="2596" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-29" x="3097" y="0"></use>
+</g>
+<g transform="translate(15973,-2605)">
+ <use xlink:href="#E1-MJMATHI-73" x="220" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-69" x="689" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-6E" x="1035" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-28" x="1635" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-53" x="2025" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-31" x="2670" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-29" x="3171" y="0"></use>
+</g>
 </g>
 <g transform="translate(19743,0)">
+<g transform="translate(0,2088)">
  <use xlink:href="#E1-MJMAIN-3D" x="333" y="0"></use>
 <g transform="translate(1445,0)">
 <g transform="translate(120,0)">
@@ -298,24 +323,8 @@
  <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-31" x="84" y="-589"></use>
 </g>
 </g>
-<g is="true"></g>
 </g>
-</g>
-<g transform="translate(0,-9228)">
-<g transform="translate(-11,0)">
-<g transform="translate(16020,-136)">
- <use xlink:href="#E1-MJMATHI-73" x="0" y="0"></use>
- <use xlink:href="#E1-MJMATHI-69" x="469" y="0"></use>
- <use xlink:href="#E1-MJMATHI-6E" x="815" y="0"></use>
- <use xlink:href="#E1-MJMAIN-28" x="1415" y="0"></use>
- <use xlink:href="#E1-MJMATHI-51" x="1805" y="0"></use>
- <use xlink:href="#E1-MJMAIN-32" x="2596" y="0"></use>
- <use xlink:href="#E1-MJMAIN-29" x="3097" y="0"></use>
-<g is="true"></g>
-</g>
-</g>
-<g transform="translate(19716,0)">
-<g transform="translate(0,-136)">
+<g transform="translate(0,-555)">
  <use xlink:href="#E1-MJMAIN-3D" x="333" y="0"></use>
 <g transform="translate(1445,0)">
 <g transform="translate(120,0)">
@@ -337,24 +346,7 @@
 </g>
 </g>
 </g>
-</g>
-</g>
-<g transform="translate(0,-11316)">
-<g transform="translate(-11,0)">
-<g transform="translate(16157,-98)">
-<g is="true"></g>
- <use xlink:href="#E1-MJMATHI-73" x="220" y="0"></use>
- <use xlink:href="#E1-MJMATHI-69" x="689" y="0"></use>
- <use xlink:href="#E1-MJMATHI-6E" x="1035" y="0"></use>
- <use xlink:href="#E1-MJMAIN-28" x="1635" y="0"></use>
- <use xlink:href="#E1-MJMATHI-53" x="2025" y="0"></use>
- <use xlink:href="#E1-MJMAIN-31" x="2670" y="0"></use>
- <use xlink:href="#E1-MJMAIN-29" x="3171" y="0"></use>
-<g is="true"></g>
-</g>
-</g>
-<g transform="translate(19928,0)">
-<g transform="translate(0,-98)">
+<g transform="translate(0,-2605)">
  <use xlink:href="#E1-MJMAIN-3D" x="333" y="0"></use>
 <g transform="translate(1445,0)">
 <g transform="translate(120,0)">
@@ -380,10 +372,12 @@
 </g>
 </g>
 </g>
-<line stroke-linecap="square" stroke-width="20.9" y2="10" y1="10" x1="10" x2="116088" transform="translate(0,7908)"></line>
-<line stroke-linecap="square" stroke-width="20.9" y2="10" y1="10" x1="10" x2="116088" transform="translate(0,-7430)"></line>
-<line stroke-linecap="square" stroke-width="20.9" y1="10" x2="10" x1="10" y2="15348" transform="translate(0,-7430)"></line>
-<line stroke-linecap="square" stroke-width="20.9" y1="10" x2="10" x1="10" y2="15348" transform="translate(116078,-7430)"></line>
+</g>
+</g>
+<line stroke-linecap="square" stroke-width="20.9" y2="10" y1="10" x1="10" x2="87515" transform="translate(0,7635)"></line>
+<line stroke-linecap="square" stroke-width="20.9" y2="10" y1="10" x1="10" x2="87515" transform="translate(0,-7156)"></line>
+<line stroke-linecap="square" stroke-width="20.9" y1="10" x2="10" x1="10" y2="14801" transform="translate(0,-7156)"></line>
+<line stroke-linecap="square" stroke-width="20.9" y1="10" x2="10" x1="10" y2="14801" transform="translate(87504,-7156)"></line>
 </g>
 </g>
 </svg>
