@@ -1,0 +1,27 @@
+
+# Mix the case here anyway you like, but for purposes of substitution,
+# the identifier will be in all uppercase.
+
+[table]
+scale:
+offset:
+
+dimsLL:
+dimsLR:
+dimsA:
+
+[lengthsL]
+hshift:      -17em
+hshift-blk1:  0.046width
+
+[lengthsR]
+hshift:       0.5em
+
+[lengths]
+hshift:      -17em
+hshift-blk1:  0.046width
+
+[angles]
+hshift:      -16.75em
+hshift-blk1: -0.05width
+hshift-blk2:  0.06width

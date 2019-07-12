@@ -4,8 +4,8 @@
   "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
 
 <!-- This looks better after MathJax turns it into SVG than straight-up in Firefox! -->
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mpadded lspace="-16.5em">
+<math xmlns:ns0="http://www.w3.org/1998/Math/MathML" display="block">
+  <mpadded lspace="%HSHIFT%">
     <mtable>
       <mtr>
         <mtd>
@@ -18,8 +18,8 @@
       </mtr>
       <mtr>
         <mtd>
-          <mpadded lspace="0.05width">
-            <mtable width="100%" columnspacing="0em 2em" columnalign="right left">
+          <mpadded lspace="%HSHIFT-BLK1%">
+            <mtable columnalign="right left" columnspacing="0em 2em" width="100%">
               <mtr>
                 <mtd>
                   <mrow>
@@ -50,7 +50,7 @@
                 <mtd>
                   <mrow>
                     <mo form="infix">=</mo>
-                    <mi>&phi;</mi>
+                    <mi>φ</mi>
                   </mrow>
                 </mtd>
               </mtr>
@@ -83,8 +83,8 @@
                     <msqrt>
                       <mn>2</mn>
                     </msqrt>
-                    <mo form="infix">&#xB7;</mo>
-                    <mi>&phi;</mi>
+                    <mo form="infix">·</mo>
+                    <mi>φ</mi>
                   </mrow>
                 </mtd>
               </mtr>
@@ -92,7 +92,7 @@
           </mpadded>
         </mtd>
       </mtr>
-      <mtr></mtr><mtr>
+    <mtr /><mtr>
         <mtd>
           <menclose notation="bottom">
             <mstyle mathvariant="sans-serif">
@@ -148,10 +148,10 @@
             </mstyle>
           </mfrac>
           <mo form="infix">=</mo>
-          <mi>&phi;</mi>
+          <mi>φ</mi>
         </mtd>
       </mtr>
-      <mtr></mtr><mtr>
+      <mtr /><mtr>
         <mtd>
           <menclose notation="bottom">
             <mstyle mathvariant="sans-serif">
@@ -174,8 +174,8 @@
               <mn>2</mn>
             </mstyle>
           </mfrac>
-          <mo form="infix">&#xB7;</mo>
-          <mi>&phi;</mi>
+          <mo form="infix">·</mo>
+          <mi>φ</mi>
         </mtd>
       </mtr>
     </mtable>

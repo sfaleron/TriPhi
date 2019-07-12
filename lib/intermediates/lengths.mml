@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE math
+  PUBLIC "-//W3C//DTD MathML 2.0//EN"
+  "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
+
+<!-- This looks better after MathJax turns it into SVG than straight-up in Firefox! -->
+<ns0:math xmlns:ns0="http://www.w3.org/1998/Math/MathML" display="block">
+  <ns0:mpadded lspace="-17em">
+    <ns0:mtable>
+      <ns0:mtr>
+        <ns0:mtd>
+          <ns0:menclose notation="bottom">
+            <ns0:mstyle mathvariant="sans-serif">
+              <ns0:mtext>Sides</ns0:mtext>
+            </ns0:mstyle>
+          </ns0:menclose>
+        </ns0:mtd>
+      </ns0:mtr>
+      <ns0:mtr>
+        <ns0:mtd>
+          <ns0:mpadded lspace="0.046width">
+            <ns0:mtable columnalign="right left" columnspacing="0em 2em" width="100%">
+              <ns0:mtr>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mi>q</ns0:mi>
+                    <ns0:mn>1</ns0:mn>
+                    <ns0:mo form="infix">=</ns0:mo>
+                    <ns0:mi>s</ns0:mi>
+                    <ns0:mn>1</ns0:mn>
+                  </ns0:mrow>
+                </ns0:mtd>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mo form="infix">=</ns0:mo>
+                    <ns0:mn>1</ns0:mn>
+                  </ns0:mrow>
+                </ns0:mtd>
+              </ns0:mtr>
+              <ns0:mtr>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mi>q</ns0:mi>
+                    <ns0:mn>2</ns0:mn>
+                    <ns0:mo form="infix">=</ns0:mo>
+                    <ns0:mi>s</ns0:mi>
+                    <ns0:mn>2</ns0:mn>
+                  </ns0:mrow>
+                </ns0:mtd>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mo form="infix">=</ns0:mo>
+                    <ns0:mi>&#966;</ns0:mi>
+                  </ns0:mrow>
+                </ns0:mtd>
+              </ns0:mtr>
+              <ns0:mtr>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mi>q</ns0:mi>
+                    <ns0:mn>3</ns0:mn>
+                  </ns0:mrow>
+                </ns0:mtd>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mo form="infix">=</ns0:mo>
+                    <ns0:msqrt>
+                      <ns0:mn>2</ns0:mn>
+                    </ns0:msqrt>
+                  </ns0:mrow>
+                </ns0:mtd>
+              </ns0:mtr>
+              <ns0:mtr>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mi>s</ns0:mi>
+                    <ns0:mn>3</ns0:mn>
+                  </ns0:mrow>
+                </ns0:mtd>
+                <ns0:mtd>
+                  <ns0:mrow>
+                    <ns0:mo form="infix">=</ns0:mo>
+                    <ns0:msqrt>
+                      <ns0:mn>2</ns0:mn>
+                    </ns0:msqrt>
+                    <ns0:mo form="infix">&#183;</ns0:mo>
+                    <ns0:mi>&#966;</ns0:mi>
+                  </ns0:mrow>
+                </ns0:mtd>
+              </ns0:mtr>
+            </ns0:mtable>
+          </ns0:mpadded>
+        </ns0:mtd>
+      </ns0:mtr>
+    <mtr /><ns0:mtr>
+        <ns0:mtd>
+          <ns0:menclose notation="bottom">
+            <ns0:mstyle mathvariant="sans-serif">
+              <ns0:mtext>Side Ratios</ns0:mtext>
+            </ns0:mstyle>
+          </ns0:menclose>
+        </ns0:mtd>
+      </ns0:mtr>
+      <ns0:mtr>
+        <ns0:mtd>
+          <ns0:mfrac>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:mrow>
+                <ns0:mi>s</ns0:mi>
+                <ns0:mn>3</ns0:mn>
+              </ns0:mrow>
+            </ns0:mstyle>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:mrow>
+                <ns0:mi>q</ns0:mi>
+                <ns0:mn>3</ns0:mn>
+              </ns0:mrow>
+            </ns0:mstyle>
+          </ns0:mfrac>
+          <ns0:mo form="infix">=</ns0:mo>
+          <ns0:mfrac>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:mrow>
+                <ns0:mi>q</ns0:mi>
+                <ns0:mn>2</ns0:mn>
+              </ns0:mrow>
+            </ns0:mstyle>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:mrow>
+                <ns0:mi>q</ns0:mi>
+                <ns0:mn>1</ns0:mn>
+              </ns0:mrow>
+            </ns0:mstyle>
+          </ns0:mfrac>
+          <ns0:mo form="infix">=</ns0:mo>
+          <ns0:mfrac>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:mrow>
+                <ns0:mi>s</ns0:mi>
+                <ns0:mn>2</ns0:mn>
+              </ns0:mrow>
+            </ns0:mstyle>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:mrow>
+                <ns0:mi>s</ns0:mi>
+                <ns0:mn>1</ns0:mn>
+              </ns0:mrow>
+            </ns0:mstyle>
+          </ns0:mfrac>
+          <ns0:mo form="infix">=</ns0:mo>
+          <ns0:mi>&#966;</ns0:mi>
+        </ns0:mtd>
+      </ns0:mtr>
+      <ns0:mtr /><ns0:mtr>
+        <ns0:mtd>
+          <ns0:menclose notation="bottom">
+            <ns0:mstyle mathvariant="sans-serif">
+              <ns0:mtext>Height</ns0:mtext>
+            </ns0:mstyle>
+          </ns0:menclose>
+        </ns0:mtd>
+      </ns0:mtr>
+      <ns0:mtr>
+        <ns0:mtd>
+          <ns0:mi>h</ns0:mi>
+          <ns0:mo form="infix">=</ns0:mo>
+          <ns0:mfrac>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:msqrt>
+                <ns0:mn>3</ns0:mn>
+              </ns0:msqrt>
+            </ns0:mstyle>
+            <ns0:mstyle scriptlevel="-1">
+              <ns0:mn>2</ns0:mn>
+            </ns0:mstyle>
+          </ns0:mfrac>
+          <ns0:mo form="infix">&#183;</ns0:mo>
+          <ns0:mi>&#966;</ns0:mi>
+        </ns0:mtd>
+      </ns0:mtr>
+    </ns0:mtable>
+  </ns0:mpadded>
+</ns0:math>

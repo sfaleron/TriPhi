@@ -5,7 +5,7 @@
 
 <!-- This looks better after MathJax turns it into SVG than straight-up in Firefox! -->
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mpadded lspace="-16.5em">
+  <mpadded lspace="-16.75em">
     <mtable>
       <mtr>
         <mtd>
@@ -59,7 +59,7 @@
                   </mrow>
                 </mtd>
                 <mtd>
-                  <mrow>
+                   <mrow>
                     <mo form="infix">=</mo>
                     <mn>60</mn>
                   </mrow>

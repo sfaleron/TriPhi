@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE math
+  PUBLIC "-//W3C//DTD MathML 2.0//EN"
+  "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
+
+<!-- This looks better after MathJax turns it into SVG than straight-up in Firefox! -->
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mpadded lspace="0.5em">
+    <mtable>
+      <mtr>
+        <mtd>
+          <menclose notation="bottom">
+            <mstyle mathvariant="sans-serif">
+              <mtext>Side Ratios</mtext>
+            </mstyle>
+          </menclose>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mfrac>
+            <mstyle scriptlevel="-1">
+              <mrow>
+                <mi>s</mi>
+                <mn>3</mn>
+              </mrow>
+            </mstyle>
+            <mstyle scriptlevel="-1">
+              <mrow>
+                <mi>q</mi>
+                <mn>3</mn>
+              </mrow>
+            </mstyle>
+          </mfrac>
+          <mo form="infix">=</mo>
+          <mfrac>
+            <mstyle scriptlevel="-1">
+              <mrow>
+                <mi>q</mi>
+                <mn>2</mn>
+              </mrow>
+            </mstyle>
+            <mstyle scriptlevel="-1">
+              <mrow>
+                <mi>q</mi>
+                <mn>1</mn>
+              </mrow>
+            </mstyle>
+          </mfrac>
+          <mo form="infix">=</mo>
+          <mfrac>
+            <mstyle scriptlevel="-1">
+              <mrow>
+                <mi>s</mi>
+                <mn>2</mn>
+              </mrow>
+            </mstyle>
+            <mstyle scriptlevel="-1">
+              <mrow>
+                <mi>s</mi>
+                <mn>1</mn>
+              </mrow>
+            </mstyle>
+          </mfrac>
+          <mo form="infix">=</mo>
+          <mi>&phi;</mi>
+        </mtd>
+      </mtr>
+      <mtr></mtr><mtr>
+        <mtd>
+          <menclose notation="bottom">
+            <mstyle mathvariant="sans-serif">
+              <mtext>Height</mtext>
+            </mstyle>
+          </menclose>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>h</mi>
+          <mo form="infix">=</mo>
+          <mfrac>
+            <mstyle scriptlevel="-1">
+              <msqrt>
+                <mn>3</mn>
+              </msqrt>
+            </mstyle>
+            <mstyle scriptlevel="-1">
+              <mn>2</mn>
+            </mstyle>
+          </mfrac>
+          <mo form="infix">&#xB7;</mo>
+          <mi>&phi;</mi>
+        </mtd>
+      </mtr>
+    </mtable>
+  </mpadded>
+</math>
