@@ -13,6 +13,13 @@ os.chdir(osp.join(osp.dirname(osp.abspath(__file__)), '..'))
 
 tagMatch = lambda s, tag: tag == s[s.rfind('}')+1:]
 
+def write(f, *args):
+    if six.PY2:
+        return f.write(*args)
+    else:
+        return f.write(bytes(s, encoding='utf-8'))
+
+
 def stack():
     psrL = ET.XMLParser()
     psrL.entity.update(phi=chr(0x9c3) if six.PY3 else unichr(0x3c6))
@@ -43,7 +50,16 @@ def stack():
             mmlTmp = mmlIn.read()
             mmlOut.write(mmlTmp[:mmlTmp.index('<math ')])
 
-        mmlOut.write(ET.tostring(rootL, encoding='utf-8').replace('ns0:', ''))
+        if six.PY3:
+            a = ET.tostring(rootL, encoding='utf-8')
+            b = a.replace(b'ns0:', b'')
+            c = b.decode('utf-8')
+        else:
+            a = ET.tostring(rootL, encoding='utf-8')
+            b = a.replace('ns0:', '')
+            c = b
+
+        mmlOut.write(c)
 
 if __name__ == '__main__':
     stack()
