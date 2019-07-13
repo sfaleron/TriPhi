@@ -2,26 +2,37 @@
 # Mix the case here anyway you like, but for purposes of substitution,
 # the identifier will be in all uppercase.
 
+[entities]
+# "middle dot"
+# #x22C5 "small dot" may also be a good choice
+dot: #xB7
+phi:  phi
+
 [table]
 scale:
 offset:
+border:
 
-dimsLL:
-dimsLR:
+dimsL:
+dimsR:
 dimsA:
 
 [lengthsL]
+src:          src
 hshift:      -17em
 hshift-blk1:  0.046width
 
 [lengthsR]
+src:          src
 hshift:       0.5em
 
 [lengths]
+src:          intermediates
 hshift:      -17em
 hshift-blk1:  0.046width
 
 [angles]
+src:          src
 hshift:      -16.75em
 hshift-blk1: -0.05width
 hshift-blk2:  0.06width

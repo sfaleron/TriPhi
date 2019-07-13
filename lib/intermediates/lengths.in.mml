@@ -4,8 +4,8 @@
   "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
 
 <!-- This looks better after MathJax turns it into SVG than straight-up in Firefox! -->
-<math xmlns:ns0="http://www.w3.org/1998/Math/MathML" display="block">
-  <mpadded lspace="%HSHIFT%">
+<math _nsDecl="" display="block">
+  <mpadded lspace="_HSHIFT_">
     <mtable>
       <mtr>
         <mtd>
@@ -18,7 +18,7 @@
       </mtr>
       <mtr>
         <mtd>
-          <mpadded lspace="%HSHIFT-BLK1%">
+          <mpadded lspace="_HSHIFT-BLK1_">
             <mtable columnalign="right left" columnspacing="0em 2em" width="100%">
               <mtr>
                 <mtd>
@@ -50,7 +50,7 @@
                 <mtd>
                   <mrow>
                     <mo form="infix">=</mo>
-                    <mi>ৃ</mi>
+                    <mi>_PHI_</mi>
                   </mrow>
                 </mtd>
               </mtr>
@@ -83,8 +83,8 @@
                     <msqrt>
                       <mn>2</mn>
                     </msqrt>
-                    <mo form="infix">·</mo>
-                    <mi>ৃ</mi>
+                    <mo form="infix">_DOT_</mo>
+                    <mi>_PHI_</mi>
                   </mrow>
                 </mtd>
               </mtr>
@@ -148,7 +148,7 @@
             </mstyle>
           </mfrac>
           <mo form="infix">=</mo>
-          <mi>ৃ</mi>
+          <mi>_PHI_</mi>
         </mtd>
       </mtr>
       <mtr /><mtr>
@@ -174,8 +174,8 @@
               <mn>2</mn>
             </mstyle>
           </mfrac>
-          <mo form="infix">·</mo>
-          <mi>ৃ</mi>
+          <mo form="infix">_DOT_</mo>
+          <mi>_PHI_</mi>
         </mtd>
       </mtr>
     </mtable>

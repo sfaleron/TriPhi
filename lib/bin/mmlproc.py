@@ -1,28 +1,38 @@
 
 from   six.moves.configparser import ConfigParser
 import os.path as osp
-
-import os
-import sys
 import six
-key = sys.argv[1]
 
-os.chdir(osp.dirname(osp.abspath(__file__)))
+from helpers import normPath, holdReplace
 
+def proc(key):
+    cfg = ConfigParser()
 
+    loader = cfg.read_file if six.PY3 else cfg.readfp
 
-cfg = ConfigParser()
+    loader(open('parameters', 'r'))
 
-loader = cfg.read_file if six.PY3 else cfg.readfp
+    substs  = cfg.items(key)
 
-loader(open('parameters.cfg', 'r'))
+    src = None
+    for i in range(len(substs)):
+        k,v = substs[i]
+        if k == 'src':
+            src = v
+            break
 
-substs = cfg.items(key)
+    baseIn  = osp.join( src,            key)
+    baseOut = osp.join('intermediates', key)
 
-with open(key+'.mml', 'w') as fOut:
-    with open(key+'.in.mml', 'r') as fIn:
-        s = fIn.read()
-        for k,v in substs:
-            s = s.replace('%{}%'.format(k.upper()), v)
+    with  open(baseOut   +    '.mml', 'w') as fOut:
+        with open(baseIn + '.in.mml', 'r') as fIn:
+            s = holdReplace.subst(fIn.read())
+            for k,v in substs:
+                s = s.replace('_{}_'.format(k.upper()), v)
 
-    fOut.write(s)
+        fOut.write(s)
+
+if __name__ == '__main__':
+    import sys
+    normPath()
+    proc(sys.argv[1])

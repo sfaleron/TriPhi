@@ -5,7 +5,7 @@
 
 <!-- This looks better after MathJax turns it into SVG than straight-up in Firefox! -->
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mpadded lspace="%HSHIFT%">
+  <mpadded lspace="_HSHIFT_">
     <mtable>
       <mtr>
         <mtd>
@@ -18,7 +18,7 @@
       </mtr>
       <mtr>
         <mtd>
-          <mpadded lspace="%HSHIFT-BLK1%">
+          <mpadded lspace="_HSHIFT-BLK1_">
             <mtable width="100%" columnspacing="0em 2em" columnalign="right left">
               <mtr>
                 <mtd>
@@ -71,7 +71,7 @@
       </mtr>
       <mtr></mtr><mtr>
         <mtd>
-          <mpadded lspace="%HSHIFT-BLK2%">
+          <mpadded lspace="_HSHIFT-BLK2_">
           <mtable width="100%" columnspacing="0em 2em" columnalign="right left">
             <mtr>
               <mtd>
@@ -117,7 +117,7 @@
                       <mn>4</mn>
                     </mstyle>
                   </mfrac>
-                  <mo form="infix">&#xB7;</mo>
+                  <mo form="infix">_DOT_</mo>
                   <mfrac>
                     <mstyle scriptlevel="-1">
                       <mn>1</mn>
@@ -158,10 +158,10 @@
                       <mn>4</mn>
                     </mstyle>
                   </mfrac>
-                  <mo form="infix">&#xB7;</mo>
+                  <mo form="infix">_DOT_</mo>
                   <mfrac>
                     <mstyle scriptlevel="-1">
-                      <mi>&phi;</mi>
+                      <mi>_PHI_</mi>
                     </mstyle>
                     <mstyle scriptlevel="-1">
                       <mn>1</mn>
@@ -199,13 +199,13 @@
                       <mn>4</mn>
                     </mstyle>
                   </mfrac>
-                  <mo form="infix">&#xB7;</mo>
+                  <mo form="infix">_DOT_</mo>
                   <mfrac>
                     <mstyle scriptlevel="-1">
                       <mn>1</mn>
                     </mstyle>
                     <mstyle scriptlevel="-1">
-                      <mi>&phi;</mi>
+                      <mi>_PHI_</mi>
                     </mstyle>
                   </mfrac>
                 </mrow>

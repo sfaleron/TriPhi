@@ -5,7 +5,7 @@
 
 <!-- This looks better after MathJax turns it into SVG than straight-up in Firefox! -->
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mpadded lspace="%HSHIFT%">
+  <mpadded lspace="_HSHIFT_">
     <mtable>
       <mtr>
         <mtd>
@@ -18,7 +18,7 @@
       </mtr>
       <mtr>
         <mtd>
-          <mpadded lspace="%HSHIFT-BLK1%">
+          <mpadded lspace="_HSHIFT-BLK1_">
             <mtable width="100%" columnspacing="0em 2em" columnalign="right left">
               <mtr>
                 <mtd>
@@ -50,7 +50,7 @@
                 <mtd>
                   <mrow>
                     <mo form="infix">=</mo>
-                    <mi>&phi;</mi>
+                    <mi>_PHI_</mi>
                   </mrow>
                 </mtd>
               </mtr>
@@ -83,8 +83,8 @@
                     <msqrt>
                       <mn>2</mn>
                     </msqrt>
-                    <mo form="infix">&#xB7;</mo>
-                    <mi>&phi;</mi>
+                    <mo form="infix">_DOT_</mo>
+                    <mi>_PHI_</mi>
                   </mrow>
                 </mtd>
               </mtr>

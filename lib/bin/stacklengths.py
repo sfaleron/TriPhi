@@ -3,41 +3,33 @@
 # rows from the right component to the end of the left component's table,
 # rather than creating a new table and treating them symmetrically.
 
+from __future__ import print_function
+
 import xml.etree.ElementTree as ET
-import six
 
 import os.path as osp
 import os
 
-os.chdir(osp.join(osp.dirname(osp.abspath(__file__)), '..'))
-
-tagMatch = lambda s, tag: tag == s[s.rfind('}')+1:]
-
-def write(f, *args):
-    if six.PY2:
-        return f.write(*args)
-    else:
-        return f.write(bytes(s, encoding='utf-8'))
-
+from helpers import normPath, writeSix, r_ns, holdReplace
 
 def stack():
-    psrL = ET.XMLParser()
-    psrL.entity.update(phi=chr(0x9c3) if six.PY3 else unichr(0x3c6))
+    with open('src/lengthsL.in.mml', 'r') as fLeft, \
+         open('src/lengthsR.in.mml', 'r') as fRight:
 
-    psrR = ET.XMLParser()
-    psrR.entity.update(phi=chr(0x9c3) if six.PY3 else unichr(0x3c6))
+         treeL = ET.ElementTree(ET.fromstring(
+             r_ns.sub(holdReplace,  fLeft.read())))
 
-    treeL = ET.parse('src/lengthsL.in.mml', parser=psrL)
-    treeR = ET.parse('src/lengthsR.in.mml', parser=psrR)
+         treeR = ET.ElementTree(ET.fromstring(
+             r_ns.sub(holdReplace, fRight.read())))
 
     rootL  = treeL.getroot()
 
     tableL = rootL
-    while not tagMatch(tableL.tag, 'mtable'):
+    while tableL.tag != 'mtable':
         tableL = tableL[0]
 
     tableR = treeR.getroot()
-    while not tagMatch(tableR.tag, 'mtable'):
+    while tableR.tag != 'mtable':
         tableR = tableR[0]
 
     # A space between
@@ -50,22 +42,8 @@ def stack():
             mmlTmp = mmlIn.read()
             mmlOut.write(mmlTmp[:mmlTmp.index('<math ')])
 
-        if six.PY3:
-            a = ET.tostring(rootL, encoding='utf-8')
-            b = a.replace(b'ns0:', b'')
-            c = b.decode('utf-8')
-        else:
-            a = ET.tostring(rootL, encoding='utf-8')
-            b = a.replace('ns0:', '')
-            c = b
-
-        mmlOut.write(c)
+        writeSix(mmlOut, ET.tostring(rootL, encoding='utf-8'))
 
 if __name__ == '__main__':
+    normPath()
     stack()
-
-
-# proposed fix: remove xmlns from input!
-# increment the HEAD pulled off, add </math> at the end
-# might have to remove it from both inputs?
-# poke mom/liz about stuff to bring
