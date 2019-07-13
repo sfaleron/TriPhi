@@ -12,7 +12,8 @@ def proc(key):
 
     loader(open('parameters', 'r'))
 
-    substs  = cfg.items(key)
+    substs   = cfg.items(key)
+    entities = cfg.items('entities')
 
     src = None
     for i in range(len(substs)):
@@ -27,8 +28,12 @@ def proc(key):
     with  open(baseOut   +    '.mml', 'w') as fOut:
         with open(baseIn + '.in.mml', 'r') as fIn:
             s = holdReplace.subst(fIn.read())
+
             for k,v in substs:
                 s = s.replace('_{}_'.format(k.upper()), v)
+
+            for k,v in entities:
+                s = s.replace('_{}_'.format(k.upper()), '&{};'.format(v))
 
         fOut.write(s)
 

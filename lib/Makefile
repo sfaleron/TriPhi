@@ -5,18 +5,26 @@
 #                   the final mml with substituions made
 # s: .svg    "svg"
 
+# dependency for "m" targets do not work, except for the derived "r"
+# most likely something to do with target and dependency sharing a directory
+
 NODE = /usr/bin/env node
 LINT = /usr/bin/env xmllint --noout
 PY   = /usr/bin/env python
 
-MMLDEPS = bin/mmlproc.py parameters
-SVGDEPS = bin/mml2svg.js intermediates/nsDecl
+MMLDEPS = bin/mmlproc.py parameters intermediates/nsDecl
+SVGDEPS = bin/mml2svg.js
+ENDDEPS = parameters intermediates/angles.svg bin/relationships.py
 
+STEPDEPS = $(ENDDEPS) intermediates/lengthsL.svg intermediates/lengthsR.svg
+TABLDEPS = $(ENDDEPS) intermediates/lengths.svg
+
+#ALLDEPS  = $(TABLDEPS)
+ALLDEPS  = $(STEPDEPS)
 
 all: relationships.svg
 
-relationships.svg: parameters intermediates/angles.svg bin/relationships.py \
-	intermediates/lengthsL.svg intermediates/lengthsR.svg
+relationships.svg: $(ALLDEPS)
 	$(PY) relationships.py
 
 intermediates/nsDecl: src/lengthsL.in.mml src/lengthsR.in.mml src/angles.in.mml
@@ -34,8 +42,7 @@ intermediates/lengths.svg:    intermediates/lengths.mml $(SVGDEPS)
 intermediates/angles.mml:             src/angles.in.mml $(MMLDEPS)
 intermediates/angles.svg:      intermediates/angles.mml $(SVGDEPS)
 
-intermediates/lengths.in.mml: \
-	src/lengthsL.in.mml src/lengthsR.in.mml
+intermediates/lengths.in.mml: src/lengthsL.in.mml src/lengthsR.in.mml
 	$(PY) bin/stacklengths.py
 
 %.mml: %.in.mml
@@ -45,21 +52,26 @@ intermediates/lengths.in.mml: \
 	$(NODE) bin/mml2svg $< $@
 
 
-.PHONY:     touchLeaves  \
-  all     lintAll lintR  \
-  lintLr  lintLm  lintLs \
-  lintRr  lintRm  lintRs \
-  lintAr  lintAm  lintAs \
-  lintLRr lintLRm lintLRs
+.PHONY: all   touchLeaves  \
+	clean   lintAll lintR  \
+	lintLr  lintLm  lintLs \
+	lintRr  lintRm  lintRs \
+	lintAr  lintAm  lintAs \
+	lintLRr lintLRm lintLRs
+
+clean:
+	( cd intermediates; rm -f ../relationships.svg lengths.in.mml \
+	lengthsL.mml lengthsL.svg lengthsR.mml lengthsR.svg nsDecl \
+	lengths.mml  lengths.svg	angles.mml   angles.svg )
 
 touchLeaves:
-	touch parameters src/lengthsL.in.mml src/lengthsR.in.mml src/angles.in.mml
+	touch src/lengthsL.in.mml src/lengthsR.in.mml src/angles.in.mml parameters
 
 lintAll:  lintAll lintR  \
-  lintLr  lintLm  lintLs \
-  lintRr  lintRm  lintRs \
-  lintAr  lintAm  lintAs \
-  lintLRr lintLRm lintLRs
+	lintLr  lintLm  lintLs \
+	lintRr  lintRm  lintRs \
+	lintAr  lintAm  lintAs \
+	lintLRr lintLRm lintLRs
 
 lintR:
 	$(LINT) relationships.svg            || true
@@ -67,30 +79,38 @@ lintR:
 # lengths, left/right
 lintLr:
 	$(LINT) src/lengthsL.in.mml          || true
+
 lintLm:
 	$(LINT) intermediates/lengthsL.mml   || true
+
 lintLs:
 	$(LINT) intermediates/lengthsL.svg   || true
 
 lintRr:
 	$(LINT) src/lengthsR.in.mml          || true
+
 lintRm:
 	$(LINT) intermediates/lengthsR.mml   || true
+
 lintRs:
 	$(LINT) intermediates/lengthsR.svg   || true
 
 # left/right lengths, stacked as a single column
 lintLRr:
 	$(LINT) intermediates/lengths.in.mml || true
+
 lintLRm:
 	$(LINT) intermediates/lengths.mml    || true
+
 lintLRs:
 	$(LINT) intermediates/lengths.svg    || true
 
 # angles
 lintAr:
 	$(LINT) src/angles.in.mml            || true
+
 lintAm:
 	$(LINT) intermediates/angles.mml     || true
+
 lintAs:
 	$(LINT) intermediates/angles.svg     || true
