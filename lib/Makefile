@@ -68,8 +68,8 @@ clean:
 touchLeaves:
 	touch src/lengthsL.in.mml src/lengthsR.in.mml src/angles.in.mml parameters
 
-rootDeps: intermediates/lengthsL.svg intermediates/lengthsR.svg \
-	 intermediates/lengths.svg intermediates/angles.svg
+rootDeps: intermediates/lengthsL.svg intermediates/lengths.svg \
+	      intermediates/lengthsR.svg intermediates/angles.svg
 
 lintAll:  lintAll lintR  \
 	lintLr  lintLm  lintLs \
