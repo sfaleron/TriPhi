@@ -1,5 +1,4 @@
 External dependencies
----------------------
 
   - Node.js
 

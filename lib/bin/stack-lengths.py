@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 import os.path as osp
 import os
 
-from helpers import normPath, writeSix, r_ns, holdReplace
+from helpers import normPath, writeSix, holdReplace
 
 def stack():
     with open('src/lengthsL.in.mml', 'r') as fLeft, \
@@ -21,10 +21,10 @@ def stack():
          # conform to standards. It's already compliant without the mess!
 
          treeL = ET.ElementTree(ET.fromstring(
-             r_ns.sub(holdReplace,  fLeft.read())))
+             holdReplace.r.sub(holdReplace,  fLeft.read())))
 
          treeR = ET.ElementTree(ET.fromstring(
-             r_ns.sub(holdReplace, fRight.read())))
+             holdReplace.r.sub(holdReplace, fRight.read())))
 
     rootL  = treeL.getroot()
 

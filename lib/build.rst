@@ -1,7 +1,7 @@
 
 The final products of this build system are ``table.svg`` and ``steps.svg``,
 of which one is chosen as an input to the ``unitpair.py`` program that produces
-``unitpair.svg``, as one of the primary SVG images produced by this software
+``unitpair.svg``, one of the primary images produced by this software
 package.
 
 The targets of the build system have many intermediates. Most have utility
@@ -23,6 +23,7 @@ the build process, in the order shown below.
 3. *svg:s* files are *mml:m* files rendered to SVG.
 
 Two other files are concerned:
+
 - ``parameters`` is an INI-style configuration file that defines the parameters
   used in assembly of the final products. It contains comments that should
   clarify its usage.

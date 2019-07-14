@@ -8,13 +8,10 @@ BASE  = ../src/math.py  ../src/keyattr.py ../src/options.py
 FIGR  =   ../figure.py ../src/__init__.py  ../src/layers.py ../lib/phiglyph.svg $(BASE)
 UNIT  = ../unitpair.py $(BASE)
 
-all:  *.svg *.png
+all: figure.svg figure.png unitpair.svg unitpair.png
 
-figure_std.svg:  $(FIGR)
+figure.svg:  $(FIGR)
 	$(PY) ../figure.py > $@
-
-figure_flip.svg: $(FIGR)
-	$(PY) ../figure.py :flip > $@
 
 unitpair.svg:    $(UNIT)
 	$(PY) ../unitpair.py > $@
