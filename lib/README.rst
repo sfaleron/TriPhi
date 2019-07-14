@@ -1,6 +1,13 @@
 External dependencies
-  Node.js, MathJax-node
-  Python 2 or 3, six
+---------------------
+
+  - Node.js
+
+    + MathJax-node
+
+  - Python (2 or 3)
+
+    + six
 
 Most build targets are included in the repository. They are text files, generally not
 very long, and useful on their own. By their inclusion, a build environment is not
