@@ -2,11 +2,32 @@
 # Mix the case here anyway you like, but for purposes of substitution,
 # the identifier will be in all uppercase.
 
+# Comments only work when on a line by themselves. Python2 may be more
+# permissive wrt comments sharing lines with non-comments, but that's going
+# to be ended-of-life Real Soon Now (as of the time of this writing, ofc!).
+
+# Medium and small dots are indistinguishable on my Chromium and Firefox,
+# presumably using the same fonts included by MathJax.
+
+# The hex code for a small dot is x22c5.
+# --------------------------------------------------------------------------
+
+# These don't affect the validity of the mml or svg, but they make editing
+# the source a bit clearer.
 [entities]
-# "middle dot"
-# #x22C5 "small dot" may also be a good choice
 dot: #xB7
 phi:  phi
+
+# [steps] and [table] are not used at this time, but that is planned to
+# change sooner rather than later.
+
+[steps]
+scale:
+offset:
+border:
+
+dimsL:
+dimsA:
 
 [table]
 scale:
@@ -17,22 +38,33 @@ dimsL:
 dimsR:
 dimsA:
 
+
+# Layout adjustments. Any of the usual units will work, but relative units
+# are preferred, since they will scale with the overall figure.
+
 [lengthsL]
-src:          src
 hshift:      -17em
 hshift-blk1:  0.046width
 
 [lengthsR]
-src:          src
 hshift:       0.5em
 
 [lengths]
-src:          intermediates
 hshift:      -17em
 hshift-blk1:  0.046width
 
 [angles]
-src:          src
 hshift:      -16.75em
 hshift-blk1: -0.05width
 hshift-blk2:  0.06width
+# --------------------------------------------------------------------------
+
+# Molest these not.
+# With the standard caveat:
+#   Unless you know what you're doing!
+
+[srcDir]
+lengthsL:           src
+lengthsR:           src
+lengths:  intermediates
+angles:             src

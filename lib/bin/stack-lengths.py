@@ -16,15 +16,11 @@ def stack():
     with open('src/lengthsL.in.mml', 'r') as fLeft, \
          open('src/lengthsR.in.mml', 'r') as fRight:
 
-         # Replace the namespace declaration with a placeholder for later.
-         # ETree does some messy stuff that seems to be an attempt to
-         # conform to standards. It's already compliant without the mess!
-
          treeL = ET.ElementTree(ET.fromstring(
-             holdReplace.r.sub(holdReplace,  fLeft.read())))
+             holdReplace.substIn(fLeft.read())))
 
          treeR = ET.ElementTree(ET.fromstring(
-             holdReplace.r.sub(holdReplace, fRight.read())))
+             holdReplace.substIn(fRight.read())))
 
     rootL  = treeL.getroot()
 

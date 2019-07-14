@@ -10,19 +10,13 @@ def proc(key):
     substs   = cfg.items(key)
     entities = cfg.items('entities')
 
-    src = None
-    for i in range(len(substs)):
-        k,v = substs[i]
-        if k == 'src':
-            src = v
-            break
-
-    baseIn  = osp.join( src,            key)
-    baseOut = osp.join('intermediates', key)
+    baseIn   = osp.join(cfg.get('srcDir', key), key)
+    baseOut  = osp.join( 'intermediates',       key)
 
     with  open(baseOut   +    '.mml', 'w') as fOut:
         with open(baseIn + '.in.mml', 'r') as fIn:
-            s = holdReplace.subst(fIn.read())
+            #s = holdReplace.substOut(fIn.read())
+            s = fIn.read()
 
             for k,v in substs:
                 s = s.replace('_{}_'.format(k.upper()), v)
