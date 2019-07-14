@@ -15,7 +15,7 @@ the build process, in the order shown below.
    the only XML files that are intended for direct editing, and are located in
    the ``src`` directory. An exception is the derived file ``lengths.in.mml``
    that is a stacking of the ``lengthL`` and ``lengthR`` source files. It
-   appears in the ``intermediates`` directory with the other intermediate steps.
+   appears in the ``intermediates`` directory with the other intermediate files.
 
 2. *mml:m* files are *raw:r* files with some substitutions concerning
    mathematical symbols and layout are made.
@@ -29,4 +29,4 @@ Two other files are concerned:
   clarify its usage.
 
 - ``intermediates/nsDecl`` is a derived file that caches state used when parsing
-  the *raw* / ``r`` files and writing out the *mml:m* files.
+  the *raw/r* files and writing out the *mml:m* files.
