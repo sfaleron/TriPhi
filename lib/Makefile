@@ -53,12 +53,12 @@ intermediates/angles.svg:      intermediates/angles.mml $(SVGDEPS)
 	$(NODE) bin/mml2svg $< $@
 
 
-.PHONY: all   touchLeaves    \
-	  clean   lintAll lintR  \
-	  lintLr  lintLm  lintLs \
-	  lintRr  lintRm  lintRs \
-	  lintAr  lintAm  lintAs \
-	  lintLRr lintLRm lintLRs
+.PHONY: rootDeps touchLeaves all \
+	    clean    lintAll lintR   \
+	    lintLr   lintLm  lintLs  \
+	    lintRr   lintRm  lintRs  \
+	    lintAr   lintAm  lintAs  \
+	    lintLRr  lintLRm lintLRs
 
 clean:
 	( cd intermediates; rm -f ../relationships.svg lengths.in.mml \
@@ -67,6 +67,9 @@ clean:
 
 touchLeaves:
 	touch src/lengthsL.in.mml src/lengthsR.in.mml src/angles.in.mml parameters
+
+rootDeps: intermediates/lengthsL.svg intermediates/lengthsR.svg \
+	 intermediates/lengths.svg intermediates/angles.svg
 
 lintAll:  lintAll lintR  \
 	lintLr  lintLm  lintLs \

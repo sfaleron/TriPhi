@@ -1,16 +1,11 @@
 
-from   six.moves.configparser import ConfigParser
 import os.path as osp
 import six
 
-from helpers import normPath, holdReplace
+from helpers import normPath, loadCfg, holdReplace
 
 def proc(key):
-    cfg = ConfigParser()
-
-    loader = cfg.read_file if six.PY3 else cfg.readfp
-
-    loader(open('parameters', 'r'))
+    cfg = loadCfg('parameters')
 
     substs   = cfg.items(key)
     entities = cfg.items('entities')
