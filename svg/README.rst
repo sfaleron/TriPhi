@@ -1,7 +1,7 @@
 
 If `Inkscape`_ is installed, bitmaps may be obtained by ``make bitmaps``.
 Only PNGs are supported; Inkscape does not support export to JPEG on the
-command line, and it would `not be a good image format here`_, although it
+command line, and it would `not be a good image format here`__, although it
 offers some metadata opportunities PNG does not.
 
 The other formats are easy to obtain by replacing the ``-e`` switch with
@@ -22,4 +22,6 @@ I leave the user with three options:
   feature SVG to "x" possibilities.
 
 .. _Inkscape: https://inkscape.org/
-.. _not be a good image format here: https://en.wikipedia.org/wiki/Portable_Network_Graphics#JPEG
+.. _skipJPEG: https://en.wikipedia.org/wiki/Portable_Network_Graphics#JPEG
+
+__ SkipJPEG_
