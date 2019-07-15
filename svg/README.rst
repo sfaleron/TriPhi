@@ -11,6 +11,7 @@ the indicated alternate. See Inkspace's man page or other reference for
 available formats and their switch(es).
 
 ----
+
 Many alternates were tried, none of which were satisfactory. The bad ones
 didn't respect the stylesheet or produced garbled text, and the better ones
 managed to miss the underlines somehow, even when being rendered in a headless
@@ -23,7 +24,7 @@ I leave the user with three options:
 - Manual conversion. There is no shortage of web-based or local tools that
   feature SVG to "x" possibilities.
 
-__ SkipJPEG_
+__  SkipJPEG_
 
 .. _Inkscape: https://inkscape.org/
 .. _skipJPEG: https://en.wikipedia.org/wiki/Portable_Network_Graphics#JPEG
