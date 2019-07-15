@@ -1,8 +1,10 @@
 
-If `Inkscape`_ is installed, bitmaps may be obtained by ``make bitmaps``.
-Only PNGs are supported; Inkscape does not support export to JPEG on the
-command line, and it would `not be a good image format here`__, although it
-offers some metadata opportunities PNG does not.
+The "canonical" vector images produced by this package reside here. They can
+be rebuilt by invoking ``make`` without explicit targets. If `Inkscape`_ is
+installed, bitmaps may be obtained by ``make bitmaps``. Only PNG bitmaps
+are supported; Inkscape does not support export to JPEG on the command line,
+and it would `not be a good image format here`__, although it offers some
+metadata opportunities PNG does not.
 
 The other formats are easy to obtain by replacing the ``-e`` switch with
 the indicated alternate. See Inkspace's man page or other reference for
@@ -21,7 +23,7 @@ I leave the user with three options:
 - Manual conversion. There is no shortage of web-based or local tools that
   feature SVG to "x" possibilities.
 
+__ SkipJPEG_
+
 .. _Inkscape: https://inkscape.org/
 .. _skipJPEG: https://en.wikipedia.org/wiki/Portable_Network_Graphics#JPEG
-
-__ SkipJPEG_
