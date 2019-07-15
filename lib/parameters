@@ -44,19 +44,19 @@ dimsA:
 
 [lengthsL]
 hshift:      -17em
-hshift-blk1:  0.046width
+hshift-blk1:  0.046 width
 
 [lengthsR]
 hshift:       0.5em
 
 [lengths]
 hshift:      -17em
-hshift-blk1:  0.046width
+hshift-blk1:  0.046 width
 
 [angles]
 hshift:      -16.75em
-hshift-blk1: -0.05width
-hshift-blk2:  0.06width
+hshift-blk1: -0.05 width
+hshift-blk2:  0.06 width
 # --------------------------------------------------------------------------
 
 # Molest these not.

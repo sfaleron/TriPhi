@@ -8,7 +8,9 @@ BASE  = ../src/math.py  ../src/keyattr.py ../src/options.py
 FIGR  =   ../figure.py ../src/__init__.py  ../src/layers.py ../lib/phiglyph.svg $(BASE)
 UNIT  = ../unitpair.py $(BASE)
 
-all: figure.svg figure.png unitpair.svg unitpair.png
+all: figure.svg unitpair.svg
+
+bitmaps: figure.png unitpair.png
 
 figure.svg:  $(FIGR)
 	$(PY) ../figure.py > $@
