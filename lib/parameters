@@ -8,15 +8,14 @@
 
 # Medium and small dots are indistinguishable on my Chromium and Firefox,
 # presumably using the same fonts included by MathJax.
-
-# The hex code for a small dot is x22c5.
 # --------------------------------------------------------------------------
 
 # These don't affect the validity of the mml or svg, but they make editing
-# the source a bit clearer.
+# the source a bit clearer. Interpolated values reference the DEFAULT section,
+# at the end of this file.
 [entities]
-dot: #xB7
 phi:  phi
+dot:  %(mediumDot)s
 
 # [steps] and [table] are not used at this time, but that is planned to
 # change sooner rather than later.
@@ -43,17 +42,21 @@ dimsA:
 # are preferred, since they will scale with the overall figure.
 
 [lengthsL]
+title:        Sides
 hshift:      -17em
 hshift-blk1:  0.046 width
 
 [lengthsR]
+title:        Sides Ratios and Height
 hshift:       0.5em
 
 [lengths]
+title:        Lengths
 hshift:      -17em
 hshift-blk1:  0.046 width
 
 [angles]
+title:        Angles
 hshift:      -16.75em
 hshift-blk1: -0.05 width
 hshift-blk2:  0.06 width
@@ -68,3 +71,7 @@ lengthsL:           src
 lengthsR:           src
 lengths:  intermediates
 angles:             src
+
+[DEFAULT]
+smallDot:  #x22C5
+mediumDot: #xB7

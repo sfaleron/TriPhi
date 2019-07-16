@@ -2,6 +2,8 @@
 # Take the length and angles SVGs and create a merged document with each as a
 # column in a table with borders.
 
+# Consider including a MathJax badge
+
 from helpers import normPath, loadCfg
 
 if __name__ == '__main__':

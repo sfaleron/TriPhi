@@ -2,7 +2,7 @@
 import os.path as osp
 import six
 
-from helpers import normPath, loadCfg, holdReplace
+from helpers import normPath, loadCfg
 
 def proc(key):
     cfg = loadCfg('parameters')
@@ -15,7 +15,6 @@ def proc(key):
 
     with  open(baseOut   +    '.mml', 'w') as fOut:
         with open(baseIn + '.in.mml', 'r') as fIn:
-            #s = holdReplace.substOut(fIn.read())
             s = fIn.read()
 
             for k,v in substs:
