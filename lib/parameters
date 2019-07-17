@@ -52,7 +52,7 @@ hshift:       0.5em
 
 [lengths]
 title:        Lengths
-hshift:      -17em
+hshift:      -16.5em
 hshift-blk1:  0.046 width
 
 [angles]

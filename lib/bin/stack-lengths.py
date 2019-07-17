@@ -5,44 +5,31 @@
 
 from __future__ import print_function
 
-import xml.etree.ElementTree as ET
-
-import os.path as osp
-import os
-
-from helpers import normPath, writeSix, holdReplace
+from helpers import normPath, writeSix
 
 def stack():
-    with open('src/lengthsL.in.mml', 'r') as fLeft, \
-         open('src/lengthsR.in.mml', 'r') as fRight:
+    with open('src/lengthsL.in.mml', 'r') as fdL, \
+         open('src/lengthsR.in.mml', 'r') as fdR:
 
-         treeL = ET.ElementTree(ET.fromstring(
-             holdReplace.substIn(fLeft.read())))
+         wholeL = fdL.read()
+         wholeR = fdR.read()
 
-         treeR = ET.ElementTree(ET.fromstring(
-             holdReplace.substIn(fRight.read())))
+         startL = wholeL. index('<mtr>')
+         endL   = wholeL.rindex('</mtable>')
+         bodyL  = wholeL[startL:endL]
+         head   = wholeL[:startL]
 
-    rootL  = treeL.getroot()
+         startR = wholeR. index('<mtr>')
+         endR   = wholeR.rindex('</mtable>')
+         bodyR  = wholeR[startR:endR]
+         tail   = wholeR[endR:]
 
-    tableL = rootL
-    while tableL.tag != 'mtable':
-        tableL = tableL[0]
+         wholeOut = '\n'.join([i.strip() for i in (
+             head, bodyL, '<mtr></mtr>', bodyR, tail )])
 
-    tableR = treeR.getroot()
-    while tableR.tag != 'mtable':
-        tableR = tableR[0]
-
-    # A space between
-    ET.SubElement(tableL, 'mtr')
-
-    tableL.extend(tableR)
-
-    with open('intermediates/lengths.in.mml', 'w') as mmlOut:
-        with open('src/lengthsL.in.mml', 'r') as mmlIn:
-            mmlTmp = mmlIn.read()
-            mmlOut.write(mmlTmp[:mmlTmp.index('<math ')])
-
-        writeSix(mmlOut, ET.tostring(rootL, encoding='utf-8'))
+         with open('intermediates/lengths.in.mml', 'w') as mmlOut:
+             #writeSix(mmlOut, wholeOut)
+             mmlOut.write(wholeOut)
 
 if __name__ == '__main__':
     normPath()

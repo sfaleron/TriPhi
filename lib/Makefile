@@ -9,7 +9,7 @@ NODE = /usr/bin/env node
 LINT = /usr/bin/env xmllint --noout
 PY   = /usr/bin/env python
 
-MMLDEPS = bin/mmlproc.py parameters intermediates/nsDecl
+MMLDEPS = bin/mmlproc.py parameters
 SVGDEPS = bin/mml2svg.js
 ENDDEPS = parameters intermediates/angles.svg bin/relationships.py
 
@@ -23,9 +23,6 @@ all: relationships.svg
 
 relationships.svg: $(ALLDEPS)
 	$(PY) relationships.py
-
-intermediates/nsDecl: src/lengthsL.in.mml src/lengthsR.in.mml src/angles.in.mml
-	$(PY) bin/helpers.py
 
 intermediates/lengths.in.mml: bin/stack-lengths.py \
 	src/lengthsL.in.mml src/lengthsR.in.mml
@@ -62,7 +59,7 @@ intermediates/angles.svg:      intermediates/angles.mml $(SVGDEPS)
 
 clean:
 	( cd intermediates; rm -f ../relationships.svg lengths.in.mml \
-	lengthsL.mml lengthsL.svg lengthsR.mml lengthsR.svg nsDecl \
+	lengthsL.mml lengthsL.svg lengthsR.mml lengthsR.svg \
 	lengths.mml  lengths.svg	angles.mml   angles.svg )
 
 touchLeaves:
