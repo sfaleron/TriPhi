@@ -1,7 +1,4 @@
 
-# Mix the case here anyway you like, but for purposes of substitution,
-# the identifier will be in all uppercase.
-
 # Comments only work when on a line by themselves. Python2 may be more
 # permissive wrt comments sharing lines with non-comments, but that's going
 # to be ended-of-life Real Soon Now (as of the time of this writing, ofc!).
@@ -14,64 +11,65 @@
 # the source a bit clearer. Interpolated values reference the DEFAULT section,
 # at the end of this file.
 [entities]
-phi:  phi
-dot:  %(mediumDot)s
+phi = phi
+dot = %(mediumDot)s
+
 
 # [steps] and [table] are not used at this time, but that is planned to
 # change sooner rather than later.
 
 [steps]
-scale:
-offset:
-border:
+scale  =
+offset =
+border =
 
-dimsL:
-dimsA:
+dimsL  =
+dimsA  =
 
 [table]
-scale:
-offset:
-border:
+scale  =
+offset =
+border =
 
-dimsL:
-dimsR:
-dimsA:
+dimsL  =
+dimsR  =
+dimsA  =
+
+
+[titles]
+lengthsL = Sides
+lengthsR = Sides Ratios and Height
+lengths  = Lengths
+angles   = Angles
 
 
 # Layout adjustments. Any of the usual units will work, but relative units
 # are preferred, since they will scale with the overall figure.
 
+# Mix the case of the options (LHS) here anyway you like, but for purposes
+# of substitution, the identifier will be in all uppercase.
+
 [lengthsL]
-title:        Sides
-hshift:      -17em
-hshift-blk1:  0.046 width
+hshift      = -17em
+hshift-blk1 =  0.046 width
 
 [lengthsR]
-title:        Sides Ratios and Height
-hshift:       0.5em
+hshift      =  0.5em
 
 [lengths]
-title:        Lengths
-hshift:      -16.5em
-hshift-blk1:  0.046 width
+hshift      = -16.5em
+hshift-blk1 =  0.046 width
 
 [angles]
-title:        Angles
-hshift:      -16.75em
-hshift-blk1: -0.05 width
-hshift-blk2:  0.06 width
+hshift      = -16.75em
+hshift-blk1 = -0.05 width
+hshift-blk2 =  0.06 width
 # --------------------------------------------------------------------------
 
 # Molest these not.
 # With the standard caveat:
 #   Unless you know what you're doing!
 
-[srcDir]
-lengthsL:           src
-lengthsR:           src
-lengths:  intermediates
-angles:             src
-
 [DEFAULT]
-smallDot:  #x22C5
-mediumDot: #xB7
+smallDot  = #x22C5
+mediumDot = #xB7

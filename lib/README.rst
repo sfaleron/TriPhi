@@ -3,6 +3,7 @@ External dependencies:
   - `Node.js`_
 
     + `MathJax-node`_
+    + `ini`_
 
   - `Python`_ (2 or 3)
 
@@ -20,4 +21,5 @@ for better control, or all targets at once by running ``bin/zipbuild.sh``.
 .. _Python:  https://python.org/
 
 .. _MathJax-node: https://github.com/mathjax/MathJax-node
+.. _ini: https://github.com/npm/ini#readme
 .. _six: https://pypi.org/project/six/

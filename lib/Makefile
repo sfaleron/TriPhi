@@ -47,7 +47,7 @@ intermediates/lengths.svg:    intermediates/lengths.mml $(SVGDEPS)
 intermediates/angles.svg:      intermediates/angles.mml $(SVGDEPS)
 
 %.svg: %.mml
-	$(NODE) bin/mml2svg $< $@
+	$(NODE) bin/mml2svg $(notdir $*)
 
 
 .PHONY: rootDeps touchLeaves all \

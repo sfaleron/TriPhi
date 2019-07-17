@@ -10,8 +10,8 @@ def proc(key):
     substs   = cfg.items(key)
     entities = cfg.items('entities')
 
-    baseIn   = osp.join(cfg.get('srcDir', key), key)
-    baseOut  = osp.join( 'intermediates',       key)
+    baseIn   = osp.join('intermediates'  if key == 'lengths' else 'src', key)
+    baseOut  = osp.join('intermediates', key)
 
     with  open(baseOut   +    '.mml', 'w') as fOut:
         with open(baseIn + '.in.mml', 'r') as fIn:
