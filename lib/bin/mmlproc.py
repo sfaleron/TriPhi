@@ -8,7 +8,6 @@ def proc(key):
     cfg = loadCfg('parameters')
 
     substs   = cfg.items(key)
-    entities = cfg.items('entities')
 
     baseIn   = osp.join('intermediates'  if key == 'lengths' else 'src', key)
     baseOut  = osp.join('intermediates', key)
@@ -19,9 +18,6 @@ def proc(key):
 
             for k,v in substs:
                 s = s.replace('_{}_'.format(k.upper()), v)
-
-            for k,v in entities:
-                s = s.replace('_{}_'.format(k.upper()), '&{};'.format(v))
 
         fOut.write(s)
 

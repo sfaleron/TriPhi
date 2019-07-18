@@ -50,7 +50,7 @@
                 <mtd>
                   <mrow>
                     <mo form="infix">=</mo>
-                    <mi>_PHI_</mi>
+                    <mi>&phi;</mi>
                   </mrow>
                 </mtd>
               </mtr>
@@ -83,8 +83,8 @@
                     <msqrt>
                       <mn>2</mn>
                     </msqrt>
-                    <mo form="infix">_DOT_</mo>
-                    <mi>_PHI_</mi>
+                    <mo form="infix">&middot;</mo>
+                    <mi>&phi;</mi>
                   </mrow>
                 </mtd>
               </mtr>

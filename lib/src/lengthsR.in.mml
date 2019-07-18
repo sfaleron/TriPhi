@@ -63,7 +63,7 @@
             </mstyle>
           </mfrac>
           <mo form="infix">=</mo>
-          <mi>_PHI_</mi>
+          <mi>&phi;</mi>
         </mtd>
       </mtr>
       <mtr></mtr><mtr>
@@ -89,8 +89,8 @@
               <mn>2</mn>
             </mstyle>
           </mfrac>
-          <mo form="infix">_DOT_</mo>
-          <mi>_PHI_</mi>
+          <mo form="infix">&middot;</mo>
+          <mi>&phi;</mi>
         </mtd>
       </mtr>
     </mtable>

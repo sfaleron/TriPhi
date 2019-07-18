@@ -7,14 +7,6 @@
 # presumably using the same fonts included by MathJax.
 # --------------------------------------------------------------------------
 
-# These don't affect the validity of the mml or svg, but they make editing
-# the source a bit clearer. Interpolated values reference the DEFAULT section,
-# at the end of this file.
-[entities]
-phi = phi
-dot = %(mediumDot)s
-
-
 # [steps] and [table] are not used at this time, but that is planned to
 # change sooner rather than later.
 
@@ -70,6 +62,5 @@ hshift-blk2 =  0.06 width
 # With the standard caveat:
 #   Unless you know what you're doing!
 
+# Nothing to cause mischief with at the moment, sorry!
 [DEFAULT]
-smallDot  = #x22C5
-mediumDot = #xB7

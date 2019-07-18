@@ -117,7 +117,7 @@
                       <mn>4</mn>
                     </mstyle>
                   </mfrac>
-                  <mo form="infix">_DOT_</mo>
+                  <mo form="infix">&middot;</mo>
                   <mfrac>
                     <mstyle scriptlevel="-1">
                       <mn>1</mn>
@@ -158,10 +158,10 @@
                       <mn>4</mn>
                     </mstyle>
                   </mfrac>
-                  <mo form="infix">_DOT_</mo>
+                  <mo form="infix">&middot;</mo>
                   <mfrac>
                     <mstyle scriptlevel="-1">
-                      <mi>_PHI_</mi>
+                      <mi>&phi;</mi>
                     </mstyle>
                     <mstyle scriptlevel="-1">
                       <mn>1</mn>
@@ -199,13 +199,13 @@
                       <mn>4</mn>
                     </mstyle>
                   </mfrac>
-                  <mo form="infix">_DOT_</mo>
+                  <mo form="infix">&middot;</mo>
                   <mfrac>
                     <mstyle scriptlevel="-1">
                       <mn>1</mn>
                     </mstyle>
                     <mstyle scriptlevel="-1">
-                      <mi>_PHI_</mi>
+                      <mi>&phi;</mi>
                     </mstyle>
                   </mfrac>
                 </mrow>
