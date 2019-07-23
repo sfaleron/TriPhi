@@ -7,7 +7,8 @@ from     simplesvg import (
     SVGStack, Polygon, Group, Style,
     filled_polygon, Line, SVG, TSpan )
 
-from simplesvg.lib import HatchDecorations, ArcDecorations, LineLabel, AngleLabel
+from  simplesvg.lib.math.decorations import (
+    HatchDecorations, ArcDecorations, LineLabel, AngleLabel )
 
 from src.options   import defaults
 from src.math      import Point, sqrt, make_scaler, pi
