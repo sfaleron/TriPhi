@@ -8,6 +8,7 @@ a favicon, for instance.
 ----
 
 Depends on:
+
   - `SimpleSVG`_, `attrs`_, `six`_
   - a couple of personal libraries I hope to have on GitHub soon.
 
