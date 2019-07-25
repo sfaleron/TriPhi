@@ -12,10 +12,11 @@ available formats and their switch(es).
 
 ----
 
-Many alternates were tried, none of which were satisfactory. The bad ones
-didn't respect the stylesheet or produced garbled text, and the better ones
-managed to miss the underlines somehow, even when being rendered in a headless
-browser instance which rendered perfectly in the usual standalone configuration.
+Many alternatives to Inkscappe were tried, none of which were satisfactory.
+The bad ones didn't respect the stylesheet or produced garbled text, and the
+better ones managed to miss the underlines somehow, even when being rendered
+in a headless browser instance which rendered perfectly in the usual
+standalone configuration.
 
 A comprehensive evaluation of available solutions was attempted, but it
 certainly wasn't exhaustive. I'm open to suggestions that are:
@@ -23,19 +24,31 @@ certainly wasn't exhaustive. I'm open to suggestions that are:
 - Freely available
 - Cross platform
 - Preferably can run locally with a minimum of bulky or installed-for-all-users
-  dependencies, but a reliable, public API service would be considered.
+  dependencies, but a reliable, public API service would be considered. \*
 
 The user is left with three options:
 
 - Abstain; vector graphics are the future!
 - Use Inkscape; it's a handy tool and open source. The recent releases don't
   even crash regularly on Windoze anymore!
-  * Win7, at least. One never knows with win10..
+
+  + Win7, at least. One never knows with win10..
+
 - Manual conversion. There is no shortage of web-based or local tools that
   feature SVG to "x" possibilities.
+
+----
+
+\* I found a few public APIs with free plans. One seemed less restrictive and
+had the most overall developer-friendly feel: `cloudconvert`_. I tried them
+out, and got byte-wise identical output to Inkscape's! I haven't tried the
+others, but cloudconvert worked well for me. Give them a try if Inkscape is
+less preferred than third-party-over-internet-service and the (ample for most)
+limitations on their free service.
 
 
 __  SkipJPEG_
 
 .. _Inkscape: https://inkscape.org/
 .. _skipJPEG: https://en.wikipedia.org/wiki/Portable_Network_Graphics#JPEG
+.. _cloudconvert: https://cloudconvert.com/
