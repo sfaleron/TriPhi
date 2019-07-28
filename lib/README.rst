@@ -30,7 +30,7 @@ Dependencies:
 .. _Python:  https://python.org/
 
 .. _Source MathML: https://www.mathcha.io/editor/vEBYC1KFnvu2vIy2
-.. _Mathcha: https://www.mathcha.io
+.. _Mathcha website: https://www.mathcha.io
 
 .. _MathJax-node: https://github.com/mathjax/MathJax-node
 .. _ini: https://github.com/npm/ini#readme
