@@ -13,7 +13,7 @@ available formats and their switch(es).
 
 ----
 
-Many alternatives to Inkscappe were tried, none of which were satisfactory.
+Many alternatives to Inkscape were tried, none of which were satisfactory.
 The bad ones didn't respect the stylesheet or produced garbled text, and the
 better ones managed to miss the underlines somehow, even when being rendered
 in a headless browser instance which rendered perfectly in the usual

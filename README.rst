@@ -5,20 +5,24 @@ The inspiration came from a `page`_ at the "Interactive Mathematics Miscellany a
 straight lines should be more recognizable when rendered at low resolution, as for
 a favicon, for instance.
 
-====================================================================================
-Short Quick-browsing Guide
-====================================================================================
-``lib/``        Geometric parameters in MathML rendered to SVG
-``svg/``        SVG and PNG images
-``figure.py``   generates the TriPhi figure
-``unitpair.py`` generates an annotated diagram of the essential geometric parameters
-``tiles.py``    recursively generates a tiling of the TriPhi figure
-====================================================================================
++------------------------------------------------------------------------------------+
+| Short Quick-browsing Guide                                                         |
++===============+====================================================================+
+|``lib/``       |Geometric parameters in MathML rendered to SVG                      |
++---------------+--------------------------------------------------------------------+
+|``svg/``       |SVG and PNG images                                                  |
++---------------+--------------------------------------------------------------------+
+|``figure.py``  |generates the TriPhi figure                                         |
++---------------+--------------------------------------------------------------------+
+|``unitpair.py``|generates an annotated diagram of the essential geometric parameters|
++---------------+--------------------------------------------------------------------+
+|``tiles.py``   |recursively generates a tiling of the TriPhi figure                 |
++---------------+--------------------------------------------------------------------+
 
 Depends on:
 
   - `SimpleSVG`_, `attrs`_, `six`_
-  - a couple of personal libraries I hope to have on GitHub soon.
+  - a couple of personal libraries I hope to have on GitHub soon
 
 .. _avatar: https://github.com/sfaleron/TriPhi/blob/master/svg/figure.png
 .. _explores: https://github.com/sfaleron/TriPhi/blob/master/svg/unitpair.png
