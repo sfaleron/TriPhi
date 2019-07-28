@@ -1,7 +1,7 @@
 
 The two "canonical" vector images produced by this package reside here, as
-well as ``fourdeep.svg``, which is a sample of tiling. They can be rebuilt
-by invoking ``make`` without explicit targets. If `Inkscape`_ is installed,
+well as ``fourdeep.svg``, which is a sample of tiling the figure. They can
+be rebuilt by invoking ``make`` without explicit targets. If `Inkscape`_ is installed,
 bitmaps may be obtained by ``make bitmaps``. Only PNG bitmaps are supported;
 Inkscape does not support exporting to JPEG on the command line, and it would
 `not be a good image format here`__ anyway, although it offers some metadata
