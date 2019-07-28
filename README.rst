@@ -12,13 +12,13 @@ a favicon, for instance.
 +-----------------+---------------------------------------------------------------------------------------------+
 |``svg/``         |SVG and PNG images                                                                           |
 +-----------------+---------------------------------------------------------------------------------------------+
-|``figure.py``    |generates the TriPhi figure                                                                  |
+|``figure.py``    |Generates the TriPhi figure                                                                  |
 +-----------------+---------------------------------------------------------------------------------------------+
-|``unitpair.py``  |generates an annotated diagram of the essential geometric parameters                         |
+|``unitpair.py``  |Generates an annotated diagram of the essential geometric parameters                         |
 +-----------------+---------------------------------------------------------------------------------------------+
-|``tiles.py``     |recursively generates a tiling of the TriPhi figure                                          |
+|``tiles.py``     |Recursively generates a tiling of the TriPhi figure                                          |
 +-----------------+---------------------------------------------------------------------------------------------+
-|``vertexdump.py``|generates a uniform text dump of vertices, in four permutations, given settings in options.py|
+|``vertexdump.py``|Generates a uniform text dump of vertices, in four permutations, given settings in options.py|
 +-----------------+---------------------------------------------------------------------------------------------+
 
 Depends on:
