@@ -19,7 +19,7 @@ a favicon, for instance.
 |``tiles.py``     |recursively generates a tiling of the TriPhi figure                                          |
 +-----------------+---------------------------------------------------------------------------------------------+
 |``vertexdump.py``|generates a uniform text dump of vertices, in four permutations, given settings in options.py|
-+-----------------+-------------------------------------------------------------- ------------------------------+
++-----------------+---------------------------------------------------------------------------------------------+
 
 Depends on:
 
