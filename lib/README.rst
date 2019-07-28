@@ -9,8 +9,8 @@ very long, and useful on their own. By their inclusion, a build environment is n
 required in order to use them.
 
 Rather than tracking these files, which could easily get messy, frozen versions are
-kept in a tracked archive, ``build.zip``. This archive can be updated manually
-for better control, or all targets at once by running ``bin/zipbuild.sh``.
+kept in a tracked archive, ``build.zip``. Updating can be done manually for better
+control, or all at once by running ``bin/zipbuild.sh``.
 
 ----
 
