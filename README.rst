@@ -5,7 +5,15 @@ The inspiration came from a `page`_ at the "Interactive Mathematics Miscellany a
 straight lines should be more recognizable when rendered at low resolution, as for
 a favicon, for instance.
 
-----
+====================================================================================
+Short Quick-browsing Guide
+====================================================================================
+``lib/``        Geometric parameters in MathML rendered to SVG
+``svg/``        SVG and PNG images
+``figure.py``   generates the TriPhi figure
+``unitpair.py`` generates an annotated diagram of the essential geometric parameters
+``tiles.py``    recursively generates a tiling of the TriPhi figure
+====================================================================================
 
 Depends on:
 

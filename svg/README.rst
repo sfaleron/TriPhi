@@ -1,10 +1,11 @@
 
-The "canonical" vector images produced by this package reside here. They can
-be rebuilt by invoking ``make`` without explicit targets. If `Inkscape`_ is
-installed, bitmaps may be obtained by ``make bitmaps``. Only PNG bitmaps
-are supported; Inkscape does not support exporting to JPEG on the command line,
-and it would `not be a good image format here`__ anyway, although it offers some
-metadata opportunities PNG does not.
+The two "canonical" vector images produced by this package reside here, as
+well as ``fourdeep.svg``, which is a sample of tiling. They can be rebuilt
+by invoking ``make`` without explicit targets. If `Inkscape`_ is installed,
+bitmaps may be obtained by ``make bitmaps``. Only PNG bitmaps are supported;
+Inkscape does not support exporting to JPEG on the command line, and it would
+`not be a good image format here`__ anyway, although it offers some metadata
+opportunities PNG does not.
 
 The other formats are easy to obtain by replacing the ``-e`` switch with
 the indicated alternate. See Inkspace's man page or other reference for
