@@ -3,6 +3,8 @@ from   __future__  import division
 from   __future__  import print_function
 from   __future__  import absolute_import
 
+# Group and Style are not used, but either might find easy application
+
 from     simplesvg import (
     SVGStack, Polygon, Group, Style,
     filled_polygon, Line, SVG, TSpan )

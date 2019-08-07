@@ -2,7 +2,7 @@
 # Abbrivations:
 # r: .in.mml "raw"  although lengths.in.mml is derived
 # m: .mml    "mml"  "raw" is also valid mml, but this is
-#                   the final mml with substituions made
+#                   the final mml with substitutions made
 # s: .svg    "svg"
 
 NODE = /usr/bin/env node
