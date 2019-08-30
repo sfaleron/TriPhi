@@ -4,7 +4,7 @@ from __future__ import print_function
 from __future__ import absolute_import
 
 from  simplesvg import SVGStack, SVG
-from        src import layerReg, defaults, redraw
+from        src import layerReg, defaults, redraw, opts_outer
 
 class FancySet(set):
     def __init__(self, regmap):
@@ -25,6 +25,7 @@ def make_svg(args=(), opts=None):
     colors   = opts.colors
     layers   = FancySet(layerReg)
 
+    makeSquare     = False
     purgeInvisible = False
 
     for i,j in reversed(tuple(enumerate(args))):
@@ -48,6 +49,11 @@ def make_svg(args=(), opts=None):
             if cmd == 'side':
                 opts.side = float(parms[0])
 
+            if cmd == 'square':
+                # make the canvas square, and center the figure
+                makeSquare = True
+
+
             # +/- layers (from defaults?)
             # toggle/on/off visibility
             # show layers/visibility
@@ -58,7 +64,22 @@ def make_svg(args=(), opts=None):
     if not layers:
         layers.update(layerReg.names)
 
-    redraw(opts)
+    offset = (0, 0)
+
+    if makeSquare:
+        a,b,c = opts_outer(opts)
+
+        xs, ys = zip(a,b,c)
+        w = max(xs)
+        h = max(ys)
+
+        if abs(w-h) > 1e-9:
+            if w>h:
+                offset = (0, (w-h)/2)
+            else:
+                offset = ((h-w)/2, 0)
+
+    redraw(opts, offset)
 
     w,h = opts.dims
 

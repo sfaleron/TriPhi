@@ -16,7 +16,7 @@ from          six import add_metaclass
 @kw2aDec
 class Options(KeywordToAttr):
     _attribs = map(AttribItem, [
-        'colors', 'side', 'rotate', 'flip', 'attrs', 'points', 'labels'])
+        'colors', 'side', 'rotate', 'flip', 'attrs', 'points', 'labels', 'square'])
 
     def pick_pts(self, *names):
         return tuple([self.points[k] for k in names])
@@ -82,14 +82,16 @@ class LabelInfo(KeywordToAttr):
         AttribItem(   'dy',  default=0),
         AttribItem('theta',  default=0) )
 
+# this is probably okay, but the canvas won't grow on the end opposite the axes,
+# that should be managed by caller (check minimums, add that). maybe square doesn't go here.
+def redraw(options, offset=(0,0)):
+    a,b,c  = outer(options.side, options.rotate)
 
-def redraw(options):
-    a,b,c = outer(options.side, options.rotate)
     d,e,f, g,h,i = inner(a,b,c, options.flip)
 
     options.points.update(zip(
-            ('A','B','C', 'D','E','F', 'G','H','I'),
-            ( a,  b,  c,   d,  e,  f,   g,  h,  i) ) )
+        ('A','B','C', 'D','E','F', 'G','H','I'), map(lambda pt:pt+offset,
+        [ a,  b,  c,   d,  e,  f,   g,  h,  i]) ))
 
 def _make_options():
     opts = Options(side=SIDE, flip=FLIP, rotate=ROTATE,
@@ -131,6 +133,9 @@ pgonAttrs = {'stroke-width' : '0px', 'fill-opacity' : '1'}
 lineAttrs = {'stroke' : 'black',   'stroke-width' : '3nm'}
 
 from .math import outer, inner
+
+def opts_outer(options):
+    return outer(options.side, options.rotate)
 
 A,B,C        = outer( SIDE, ROTATE)
 D,E,F, G,H,I = inner(A,B,C, FLIP)
