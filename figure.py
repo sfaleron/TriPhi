@@ -5,6 +5,7 @@ from __future__ import absolute_import
 
 from  simplesvg import SVGStack, SVG
 from        src import layerReg, defaults, redraw, opts_outer
+from   src.math import Point, pi
 
 class FancySet(set):
     def __init__(self, regmap):
@@ -64,8 +65,6 @@ def make_svg(args=(), opts=None):
     if not layers:
         layers.update(layerReg.names)
 
-    offset = (0, 0)
-
     if makeSquare:
         a,b,c = opts_outer(opts)
 
@@ -75,13 +74,20 @@ def make_svg(args=(), opts=None):
 
         if abs(w-h) > 1e-9:
             if w>h:
-                offset = (0, (w-h)/2)
+                offset = Point(0, (w-h)/2)
             else:
-                offset = ((h-w)/2, 0)
+                offset = Point((h-w)/2, 0)
+        else:
+            offset = Point(0, 0)
 
-    redraw(opts, offset)
+        redraw(opts, offset)
+        w,h = opts.dims
+        w  += 2*offset.x
+        h  += 2*offset.y
 
-    w,h = opts.dims
+    else:
+        redraw(opts)
+        w,h = opts.dims
 
     stk = SVGStack(SVG('TriPhi Figure', width=w, height=h))
 
